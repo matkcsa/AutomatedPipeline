@@ -51,6 +51,8 @@ jobs:
         
     - name: "Echo in file" 
       run: echo ${{ github.event.client_payload.solution_name }}
+           echo ${{ github.event.client_payload.DevEnvironmentUrl }}
+           echo ${{ github.event.inputs.solution_exported_folder}}
 
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
