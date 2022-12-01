@@ -1,0 +1,97 @@
+name: export-check-unpack-branch
+# Export solution from DEV environment
+#  authenticates with client secret, run solution checker, export solution
+#  unpack it and prepare, commit and push a git branch with the changes
+#  
+#  using spn-auth with Client ID and Tenant ID for environemnet login 
+#  
+#  using secrets for
+#   ClientID              Service Principal App ID
+#   TenantID             Service Principal Azure AD tenant
+#   Password              User Password
+#   PowerPlatformSPN      Service Principal secrtes
+#
+#   DevEnvironmentUrl     Url referencing the development environment
+
+
+on:
+  repository_dispatch:
+    types: [my-event]
+    
+
+  workflow_dispatch:
+    inputs:
+      solution_name:
+        description: 'name of the solution to work on from Power Platform'
+        required: true
+        default: "Mentor Canvas App"
+      solution_exported_folder:
+        description: 'folder name for staging the exported solution'
+        required: true
+        default: out/exported/
+      solution_folder:
+        description: 'staging the unpacked solution folder before check-in'
+        required: true
+        default: out/solutions/
+      solution_target_folder: 
+       description: 'folder name to be created and checked in'
+       required: true
+       default: solutions/
+
+jobs:
+  export-from-dev:
+    runs-on: windows-latest
+    env:
+      RUNNER_DEBUG: 1
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: true
+        
+    - name: "Echo in file" 
+      run: echo ${{ github.event.client_payload.solution_name }}
+
+    - name: who-am-i action
+      uses: microsoft/powerplatform-actions/who-am-i@v0
+      with:
+        environment-url: ${{secrets.DevEnvironmentUrl}}
+        app-id: ${{secrets.ClientID}}
+        client-secret: ${{ secrets.PowerPlatformSPN }}
+        tenant-id: ${{secrets.TenantID}}
+
+    - name: export-solution action
+      uses: microsoft/powerplatform-actions/export-solution@v0
+      with:
+        environment-url: ${{secrets.DevEnvironmentUrl}}
+        app-id: ${{secrets.ClientID}}
+        client-secret: ${{ secrets.PowerPlatformSPN }}
+        tenant-id: ${{secrets.TenantID}}
+        solution-name: ${{ github.event.client_payload.solution_name }}
+        solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.client_payload.solution_name }}.zip
+        managed: false
+        
+    - name: check-solution action
+      uses: microsoft/powerplatform-actions/check-solution@v0
+      with:
+       environment-url: ${{secrets.DevEnvironmentUrl}}
+       app-id: ${{secrets.ClientID}}
+       client-secret: ${{ secrets.PowerPlatformSPN }}
+       tenant-id: ${{secrets.TenantID}}
+       path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.client_payload.solution_name }}.zip
+        
+    - name: unpack-solution action
+      uses: microsoft/powerplatform-actions/unpack-solution@v0
+      with:
+        solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.client_payload.solution_name }}.zip
+        solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
+        solution-type: 'Unmanaged'
+        overwrite-files: true
+
+    - name: branch-solution, prepare it for a PullRequest
+      uses: microsoft/powerplatform-actions/branch-solution@v0
+      with:
+        solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
+        solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.client_payload.solution_name }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        allow-empty-commit: true
