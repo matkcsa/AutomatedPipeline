@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b86eaafc-4ce4-45ee-8000-34c869dd635d}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab name="general" verticallayout="true" id="{19bca792-e26a-4341-a72e-027f237b0051}" IsUserDefined="0">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="25%">
+              <sections>
+                <section name="ColorStrip" showlabel="false" showbar="false" columns="1" IsUserDefined="0" id="{837e5473-fe58-434d-baea-3acd0fc4c40d}">
+                  <labels>
+                    <label description="ColorStrip" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6b64d8bf-56e6-4927-81e2-1011fe40bff0}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="75%">
+              <sections>
+                <section name="CardHeader" showlabel="false" showbar="false" columns="111" id="{85b39d46-0a5c-493f-ba75-35a7562a0075}" IsUserDefined="0">
+                  <labels>
+                    <label description="Header" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{43bbf5c1-687d-4e8d-a464-a94ac163d21b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Pre-Deal Stage" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                      <cell id="{b8bb0e5c-9a07-d46a-1437-919bd6e645ac}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Sub Stage" languagecode="1033" />
+                        </labels>
+                        <control id="new_substage" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="new_substage" disabled="false" />
+                      </cell>
+                      <cell id="{b7cd1313-6c49-55b4-da88-68b9e13d57c2}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Deal Type" languagecode="1033" />
+                        </labels>
+                        <control id="new_dealtype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="new_dealtype" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="CardDetails" showlabel="false" showbar="false" columns="1" id="{9ac18695-72c0-4ec2-993d-674f04d03344}" IsUserDefined="0">
+                  <labels>
+                    <label description="Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5c33143d-549b-4bf8-b4ef-af60acb093f1}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_name" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="CardFooter" showlabel="false" columns="1111" showbar="false" id="{aad5ba0a-61d9-4366-8f8e-f9fb3300fd05}" IsUserDefined="0">
+                  <labels>
+                    <label description="Footer" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ddabeda8-2c25-44d2-9506-12793a3e3c54}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                      </cell>
+                      <cell id="{1ee4bf3a-1f53-4b41-9ccc-048d6a3f7c72}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                        </labels>
+                        <control id="createdon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                      <cell id="{88682816-eec2-d1a3-c5ab-dae8741dbe44}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Pre-Deal Structure" languagecode="1033" />
+                        </labels>
+                        <control id="new_predealdealtype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="new_predealdealtype" disabled="false" />
+                      </cell>
+                      <cell id="{7847e9b8-7ed5-b571-eb0e-d8091e3dbbd0}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Traditional/Non-Traditional" languagecode="1033" />
+                        </labels>
+                        <control id="new_traditionalnontraditional" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="new_traditionalnontraditional" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A card form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

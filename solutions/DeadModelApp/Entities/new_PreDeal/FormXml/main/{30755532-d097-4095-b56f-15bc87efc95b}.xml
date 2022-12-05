@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{30755532-d097-4095-b56f-15bc87efc95b}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{e2084190-ee8d-4c1a-9b2b-61a2e9870da8}" IsUserDefined="1" name="Summary">
+          <labels>
+            <label description="Summary" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{7dba2b66-c4f4-46cb-bd98-5c91cb3cfd89}" columns="1" name="General">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{7a27550e-cf3e-464e-ba79-51a1a8ce4cca}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pre-Deal Owner" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1668694619974" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="ownerid">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>true</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="systemuser"&gt;c68d6c09-d7a7-4959-8d0f-44b8cff9b452&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2370ccbc-5bc4-47dc-b6d3-12a6e4f490f1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Sub Stage" languagecode="1033" />
+                        </labels>
+                        <control id="new_substage" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_substage" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9c67aedf-0417-4df8-b04d-e08b341caed1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pre-Deal Stage" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dcc7a4c5-a58f-4749-bdc3-6b0dfc76c3fa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{e46dca09-3652-427b-bcee-dfa69318ab0e}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Rating" languagecode="1033" />
+                        </labels>
+                        <control id="new_rating" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="new_rating" uniqueid="{5ab45bc8-4018-404e-a2bc-5e5fe3a9e881}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{8bfaeedf-dabe-458f-981a-f2001d546f55}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Priority" languagecode="1033" />
+                        </labels>
+                        <control id="cr873_priority" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="cr873_priority" uniqueid="{f874c971-a21e-4c74-bd48-258ace02d3fb}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Summary_section_3" id="a26b9acb-93f8-47dc-b6a9-96b912b044db" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c17fb532-5ed8-46f6-85dc-895bc6daff53}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Stage" languagecode="1033" />
+                        </labels>
+                        <control id="new_stage" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_stage" disabled="false" />
+                      </cell>
+                      <cell id="{12d505c7-93d2-4e1b-820f-1eb233ef6677}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Next Bid Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_nextbiddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_nextbiddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cd0d1e20-3c2b-457a-9db6-e1ed6baa6ee3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pre-Deal Plan URL" languagecode="1033" />
+                        </labels>
+                        <control id="new_predealplanurl" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="new_predealplanurl" disabled="false" />
+                      </cell>
+                      <cell id="{3d971f8b-2694-46ec-8cfd-2680b028c71d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b9d8721d-27e2-4057-b9ae-245a81956d9b}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Code Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_name" />
+                      </cell>
+                      <cell id="{631fe33a-254d-4c22-8cb9-a779b59d74a0}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{465b972a-8a20-493c-b44e-0a91e8a9a437}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estimated Signing Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_estimatedsigningdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_estimatedsigningdate" disabled="false" />
+                      </cell>
+                      <cell id="{df4bc731-9226-41dd-a168-5a9a1c24c239}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f84de794-a43c-437c-a386-89a533635793}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Traditional/Non-Traditional" languagecode="1033" />
+                        </labels>
+                        <control id="new_traditionalnontraditional" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_traditionalnontraditional" disabled="false" />
+                      </cell>
+                      <cell id="{590d377d-a170-4c99-be1e-43488f3d0cc6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estimated Closing Target Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_estimatedclosingtargetdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_estimatedclosingtargetdate" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Summary_section_8" id="b78c33b4-c59a-4865-9041-ff0920feab8a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="States &amp; Provinces" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{e3af3f52-6b1a-43e4-8ed5-933358d6d768}" rowspan="10" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1668632217806" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" uniqueid="{b5db2688-b57a-6ddb-e788-262054dc4d36}">
+                          <parameters>
+                            <RecordsPerPage>8</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>cr873_state</TargetEntityType>
+                            <ViewId>{CFB5FECB-970B-4087-8575-6E09B6C39CD0}</ViewId>
+                            <ViewIds>{CFB5FECB-970B-4087-8575-6E09B6C39CD0}</ViewIds>
+                            <RelationshipName>new_cr873_State_new_PreDeal_new_PreDeal</RelationshipName>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <IsUserView>false</IsUserView>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <IsUserChart>false</IsUserChart>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section name="Summary_section_7" id="1fbbdf72-e9bc-4b18-bdcb-a179c74b5d0f" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Contacts" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9b62a6e2-1f7f-43ca-9d14-8f94e32a3e3c}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{96e899a2-34bb-4f82-9a35-704ed98b38ab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Primary Contact" languagecode="1033" />
+                        </labels>
+                        <control id="new_primarycontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_primarycontact" disabled="false">
+                          <parameters>
+                            <AvailableViewIds>{A2D479C5-53E3-4C69-ADDD-802327E67A0D},{9201AF9C-F865-ED11-9562-0022482DB6A3}</AvailableViewIds>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DefaultViewId>{9201AF9C-F865-ED11-9562-0022482DB6A3}</DefaultViewId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{5f832e63-2648-4b57-bc81-6519e2537d53}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Primary Contact Details" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1668641126167" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="new_primarycontact">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="contact"&gt;9c30526f-0566-ed11-9562-0022482db4f8&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                            <HideQuickFormBorder>false</HideQuickFormBorder>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{84bfc733-bf44-40a0-9e5f-a47982a608d9}" rowspan="11" colspan="1" auto="true" showlabel="true">
+                        <labels>
+                          <label description="All Contacts" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{6828a3ad-de8b-b842-ed12-0149152564a6}">
+                          <parameters>
+                            <RecordsPerPage>12</RecordsPerPage>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>contact</TargetEntityType>
+                            <ViewId>{9201AF9C-F865-ED11-9562-0022482DB6A3}</ViewId>
+                            <ViewIds>{00000000-0000-0000-00AA-000010001003},{9201AF9C-F865-ED11-9562-0022482DB6A3}</ViewIds>
+                            <RelationshipName>cr873_new_PreDeal_new_PreDeal_Contact</RelationshipName>
+                            <VisualizationId>{E365462F-1DB9-46A8-928D-BEAB1A7A2375}</VisualizationId>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <IsUserView>false</IsUserView>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <IsUserChart>false</IsUserChart>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row height="auto" />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section name="_section_541" id="473fd45b-d56b-4b16-9cea-2ea25004d845" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Timeline" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{637b000c-4b3f-44a1-af2a-ba9b2099a9c8}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientNotesConfigurationJSON>{"fieldsConfig":{"labelOverride":true,"header":{"labelOption":"Show","displayOption":"AlwaysShow","dataFieldName":"createdby"},"body":[{"labelOption":"Hide","displayOption":"AlwaysShow"},{"labelOption":"Hide","displayOption":"AlwaysShow"}],"footer":{"labelOption":"Hide","displayOption":"Hide"}}}</UClientNotesConfigurationJSON>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="805be3a4-30df-4437-9be5-919a459c373e" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Bid Info" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="_section_426" id="f2e6867d-7bb5-4fc5-9be7-16014a932489" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Additional Bid Info" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e94757ed-e7c2-499c-a33a-ae8709cedd4c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Dead Deal Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_deaddealdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_deaddealdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{521a7088-34a4-4ad5-ab7c-90f6b50e2839}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Deal Type" languagecode="1033" />
+                        </labels>
+                        <control id="new_dealtype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_dealtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e965151-7e13-4b28-9b1c-40a3a75a2037}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pre-Deal Structure" languagecode="1033" />
+                        </labels>
+                        <control id="new_predealdealtype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_predealdealtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ee4487b7-344f-4360-88e3-5737a75ebd1e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Exclusivity" languagecode="1033" />
+                        </labels>
+                        <control id="new_exclusivity" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_exclusivity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{724b542d-3766-404e-ba97-f38d5e66a0f1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Broker" languagecode="1033" />
+                        </labels>
+                        <control id="new_broker" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_broker" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8d83919d-3de6-48a1-b822-02b5755c0d5a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Estimated Valuation" languagecode="1033" />
+                        </labels>
+                        <control id="new_estimatedvaluation" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="new_estimatedvaluation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9e9533f3-9b9f-43e8-89dd-6ef60c98aee4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Preliminary Valuation" languagecode="1033" />
+                        </labels>
+                        <control id="new_preliminaryvaluation" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="new_preliminaryvaluation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{412a45b2-c50d-4947-b147-16ae190eef46}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Current Valuation" languagecode="1033" />
+                        </labels>
+                        <control id="new_currentvaluation" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="new_currentvaluation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f64e0991-8bc0-43a8-a36b-127e2bfbee11}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fee %" languagecode="1033" />
+                        </labels>
+                        <control id="new_fee" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="new_fee" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_3_section_5" id="e2090ae0-23b3-4ec1-988f-177578bf26f1" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Site Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{76867801-4c39-4211-8504-6aa3d1c6c3cb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Total Retail Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_totalretailsites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_totalretailsites" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{73307073-254d-40c4-8c38-83819862d351}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Total Wholesale Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_totalwholesalesites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_totalwholesalesites" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4c6a8913-f3fb-40fa-8676-4dfd9e0bafdb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Lease Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_leasesites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_leasesites" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c6c622f9-8b36-4831-be4a-382ba4649bc7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fee Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_feesites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_feesites" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7d6a87d-1d73-42f7-9aa5-ca05aef50eff}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Retail &amp; Wholesale" languagecode="1033" />
+                        </labels>
+                        <control id="new_retailwholesale" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="new_retailwholesale" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{76000ed0-fa58-4d5b-b939-001e7196692d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Total RE Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_totalresites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_totalresites" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="Summary_section_6" id="0e4ae67f-e416-48d5-a83f-b668930d7361" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Round 1 Bid Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{070f4c53-e66c-45aa-9ef2-782590befb5f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Purchase Price" languagecode="1033" />
+                        </labels>
+                        <control id="new_round1purchaseprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="new_round1purchaseprice" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3352e77f-1e61-4c62-819a-97de255ba685}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Bid Submitted" languagecode="1033" />
+                        </labels>
+                        <control id="new_round1bidsubmitted" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_round1bidsubmitted" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{7711f9f6-3cc0-4ffa-bb92-7db77ab73441}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Additional Considerations" languagecode="1033" />
+                        </labels>
+                        <control id="new_round1additionalconsiderations" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="new_round1additionalconsiderations" uniqueid="{0ab414ec-487c-4232-82f0-f78e5fd050fb}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bbf200ab-536e-4bc0-9158-bb165777932e}" userspacer="true" showlabel="false" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Summary_section_99" id="1cfa4674-c5eb-4c1c-bac5-d9d556dc5d40" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Round 2 Bid Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dc4347fb-91a7-42b0-b5d1-e8368bb5587f}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{26996b03-fbdc-4ec7-980e-6681a3937d95}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Purchase Price" languagecode="1033" />
+                        </labels>
+                        <control id="new_round2purchaseprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="new_round2purchaseprice" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{810689cd-f423-4110-856b-9791fb27fab3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Bid Submitted" languagecode="1033" />
+                        </labels>
+                        <control id="new_round2bidsubmitted" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_round2bidsubmitted" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d052cec1-665b-4b48-ad4c-2150328d436e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Additional Considerations" languagecode="1033" />
+                        </labels>
+                        <control id="new_round2additionalconsiderations" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="new_round2additionalconsiderations" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{abd5e2af-719b-4f2e-b302-16d7bc766a31}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Won Bid/LOI Agreed Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_wonbidloiagreeddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_wonbidloiagreeddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dd14e64c-69db-4f09-92f0-8e0edbf8452b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Won Bid/LOI Agreed" languagecode="1033" />
+                        </labels>
+                        <control id="new_wonbidloiagreed" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="new_wonbidloiagreed" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4955c937-1ca5-4ad5-9131-ba8577456d92}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Approval Needed" languagecode="1033" />
+                        </labels>
+                        <control id="new_approvalneeded" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_approvalneeded" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="d3565074-77cb-4507-9dcc-4643aec75b74" IsUserDefined="0" locklevel="0" showlabel="true" contenttype="singleComponent">
+          <labels>
+            <label description="Pre-Deal Plan" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="d8f21693-6503-4cb9-ae61-b8cc50db706b" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Tasks" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{b8167b97-aa9f-46fd-ab63-eec4c1e7b98d}" rowspan="28" colspan="1" auto="false" showlabel="true">
+                        <labels>
+                          <label description="Tasks" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{5d665c0e-fdf3-4a36-950a-7e245e8cf1ec}">
+                          <parameters>
+                            <RecordsPerPage>25</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>new_predealplan</TargetEntityType>
+                            <ViewId>{F888DF58-EB65-ED11-9562-0022482DB4D8}</ViewId>
+                            <ViewIds>{E6FEFD1D-2E4C-4E69-9484-D5842A504758},{F888DF58-EB65-ED11-9562-0022482DB4D8}</ViewIds>
+                            <RelationshipName>new_PreDealPlan_new_PreDeal_new_PreDeal</RelationshipName>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <IsUserView>false</IsUserView>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row height="auto" />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{daa00f34-2034-4987-8aea-c6f1ffd72eff}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b773796d-8566-4bbf-9213-d56279035cbf}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{2d51eb27-5b23-440f-88b7-7dac93cc268b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ed4ca91d-19d5-48d6-b023-6e5c597c3fd6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{40ea4717-a26c-4dfa-8a29-ed229ab0bf18}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ab776ef2-16f8-49aa-8005-67dc8620b82b}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Status" languagecode="1033" />
+              </labels>
+              <control id="header_statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" />
+            </cell>
+            <cell id="{1ee82f11-a98b-4526-ad0d-588b2aefb4da}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Pre-Deal Status" languagecode="1033" />
+              </labels>
+              <control id="header_statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+            </cell>
+            <cell id="{fd42d8ef-0bdd-4999-8039-a83eebdac92a}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Sub Stage" languagecode="1033" />
+              </labels>
+              <control id="header_new_substage" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_substage" disabled="false" />
+            </cell>
+            <cell locklevel="0" id="{b1900e55-40a0-43ad-b704-048fad78aa37}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{da3923b8-1957-4b84-9086-e0c03f22ca4d}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{d5b692dc-285c-4932-abaa-081348cb292f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{53cd2140-1eaf-4f40-9a54-93f4cad53032}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c8805394-fa97-4259-9493-1c666419ca70}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{329a9912-a89b-4ead-9400-63255937d11c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <controlDescriptions>
+        <controlDescription forControl="{6828a3ad-de8b-b842-ed12-0149152564a6}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{9201AF9C-F865-ED11-9562-0022482DB6A3}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>cr873_new_PreDeal_new_PreDeal_Contact</RelationshipName>
+                <TargetEntityType>contact</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{00000000-0000-0000-00AA-000010001003},{9201AF9C-F865-ED11-9562-0022482DB6A3}</FilteredViewIds>
+              </data-set>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+              <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+              <EnablePagination static="true" type="Enum">no</EnablePagination>
+              <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+              <EnableDropdownColor static="true" type="Enum">yes</EnableDropdownColor>
+              <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+              <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+              <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{9201AF9C-F865-ED11-9562-0022482DB6A3}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>cr873_new_PreDeal_new_PreDeal_Contact</RelationshipName>
+                <TargetEntityType>contact</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{00000000-0000-0000-00AA-000010001003},{9201AF9C-F865-ED11-9562-0022482DB6A3}</FilteredViewIds>
+              </data-set>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+              <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+              <EnablePagination static="true" type="Enum">no</EnablePagination>
+              <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+              <EnableDropdownColor static="true" type="Enum">yes</EnableDropdownColor>
+              <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+              <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+              <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{9201AF9C-F865-ED11-9562-0022482DB6A3}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>cr873_new_PreDeal_new_PreDeal_Contact</RelationshipName>
+                <TargetEntityType>contact</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{00000000-0000-0000-00AA-000010001003},{9201AF9C-F865-ED11-9562-0022482DB6A3}</FilteredViewIds>
+              </data-set>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+              <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+              <EnablePagination static="true" type="Enum">no</EnablePagination>
+              <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+              <EnableDropdownColor static="true" type="Enum">yes</EnableDropdownColor>
+              <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+              <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+              <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5d665c0e-fdf3-4a36-950a-7e245e8cf1ec}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <TargetEntityType>new_predealplan</TargetEntityType>
+                <ViewId>{f888df58-eb65-ed11-9562-0022482db4d8}</ViewId>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>new_PreDealPlan_new_PreDeal_new_PreDeal</RelationshipName>
+                <FilteredViewIds>{E6FEFD1D-2E4C-4E69-9484-D5842A504758},{F888DF58-EB65-ED11-9562-0022482DB4D8}</FilteredViewIds>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+              <EnableDropdownColor type="Enum" static="true">yes</EnableDropdownColor>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <TargetEntityType>new_predealplan</TargetEntityType>
+                <ViewId>{f888df58-eb65-ed11-9562-0022482db4d8}</ViewId>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>new_PreDealPlan_new_PreDeal_new_PreDeal</RelationshipName>
+                <FilteredViewIds>{E6FEFD1D-2E4C-4E69-9484-D5842A504758},{F888DF58-EB65-ED11-9562-0022482DB4D8}</FilteredViewIds>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+              <EnableDropdownColor type="Enum" static="true">yes</EnableDropdownColor>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
+            <parameters>
+              <data-set name="Items">
+                <TargetEntityType>new_predealplan</TargetEntityType>
+                <ViewId>{f888df58-eb65-ed11-9562-0022482db4d8}</ViewId>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>new_PreDealPlan_new_PreDeal_new_PreDeal</RelationshipName>
+                <FilteredViewIds>{E6FEFD1D-2E4C-4E69-9484-D5842A504758},{F888DF58-EB65-ED11-9562-0022482DB4D8}</FilteredViewIds>
+              </data-set>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
+              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
+              <EnableJumpBar type="Enum" static="true">yes</EnableJumpBar>
+              <EnablePagination type="Enum" static="true">no</EnablePagination>
+              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
+              <EnableDropdownColor type="Enum" static="true">yes</EnableDropdownColor>
+              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5ab45bc8-4018-404e-a2bc-5e5fe3a9e881}">
+          <customControl id="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}">
+            <parameters>
+              <datafieldname>new_rating</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Rating.StarRatingControl">
+            <parameters>
+              <value type="Whole.None">new_rating</value>
+              <max type="Enum" static="true">5</max>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Rating.StarRatingControl">
+            <parameters>
+              <value type="Whole.None">new_rating</value>
+              <max type="Enum" static="true">5</max>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Rating.StarRatingControl">
+            <parameters>
+              <value type="Whole.None">new_rating</value>
+              <max type="Enum" static="true">5</max>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{f874c971-a21e-4c74-bd48-258ace02d3fb}">
+          <customControl id="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}">
+            <parameters>
+              <datafieldname>cr873_priority</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.OptionSet.OptionSetControl">
+            <parameters>
+              <value type="OptionSet">cr873_priority</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.OptionSet.OptionSetControl">
+            <parameters>
+              <value type="OptionSet">cr873_priority</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.OptionSet.OptionSetControl">
+            <parameters>
+              <value type="OptionSet">cr873_priority</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{0ab414ec-487c-4232-82f0-f78e5fd050fb}">
+          <customControl id="{E0DECE4B-6FC8-4A8F-A065-082708572369}">
+            <parameters>
+              <datafieldname>new_round1additionalconsiderations</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+            <parameters>
+              <value type="Multiple">new_round1additionalconsiderations</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+            <parameters>
+              <value type="Multiple">new_round1additionalconsiderations</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+            <parameters>
+              <value type="Multiple">new_round1additionalconsiderations</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

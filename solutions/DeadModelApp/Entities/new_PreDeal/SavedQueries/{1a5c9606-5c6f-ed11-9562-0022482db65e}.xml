@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1a5c9606-5c6f-ed11-9562-0022482db65e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_name" select="1" icon="1" preview="1">
+        <row name="result" id="new_predealid">
+          <cell name="new_name" width="200" />
+          <cell name="new_substage" width="100" />
+          <cell name="statuscode" width="100" />
+          <cell name="new_totalretailsites" width="100" />
+          <cell name="new_totalwholesalesites" width="100" />
+          <cell name="new_traditionalnontraditional" width="100" />
+          <cell name="new_retailwholesale" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="new_predeal">
+          <attribute name="new_name" />
+          <attribute name="new_predealid" />
+          <attribute name="new_substage" />
+          <attribute name="statuscode" />
+          <attribute name="new_totalretailsites" />
+          <attribute name="new_totalwholesalesites" />
+          <attribute name="new_traditionalnontraditional" />
+          <attribute name="new_retailwholesale" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Pre-Deal Pipeline" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

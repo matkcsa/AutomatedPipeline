@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{c80810d4-af69-ed11-9562-0022482db1af}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_name" select="1" icon="1" preview="1">
+        <row name="result" id="new_predealid">
+          <cell name="new_name" width="300" />
+          <cell name="new_substage" width="100" />
+          <cell name="new_primarycontact" width="140" />
+          <cell name="new_predealdealtype" width="157" />
+          <cell name="new_dealtype" width="100" />
+          <cell name="new_wonbidloiagreeddate" width="209" />
+          <cell name="new_nextbiddate" width="100" />
+          <cell name="new_totalresites" width="100" />
+          <cell name="new_totalretailsites" width="100" />
+          <cell name="new_totalwholesalesites" width="100" />
+          <cell name="new_traditionalnontraditional" width="100" />
+          <cell name="statuscode" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="new_predeal">
+          <attribute name="new_predealid" />
+          <attribute name="new_name" />
+          <order attribute="new_name" descending="false" />
+          <attribute name="new_primarycontact" />
+          <attribute name="new_predealdealtype" />
+          <attribute name="new_wonbidloiagreeddate" />
+          <attribute name="new_substage" />
+          <attribute name="statuscode" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="ownerid" operator="eq-userid" />
+          </filter>
+          <attribute name="new_nextbiddate" />
+          <attribute name="new_totalresites" />
+          <attribute name="new_totalretailsites" />
+          <attribute name="new_totalwholesalesites" />
+          <attribute name="new_traditionalnontraditional" />
+          <attribute name="new_dealtype" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Active Pre-Deals" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

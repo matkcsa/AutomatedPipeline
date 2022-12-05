@@ -1,0 +1,225 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_e78da"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "a7c0e2ec-3a48-4fc6-863c-1977e2a51aa8"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "new_predeal",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Initialize_variable": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a1489c39-6c41-4cba-90d3-5b825e52780f"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "arTasks",
+                "type": "array",
+                "value": [
+                  {
+                    "Name": "NDA Signed",
+                    "Sequence": 1
+                  },
+                  {
+                    "Name": "Recieve CIM",
+                    "Sequence": 2
+                  },
+                  {
+                    "Name": "Preliminary Deck/2Pager",
+                    "Sequence": 3
+                  },
+                  {
+                    "Name": "Desktop Site Reviews",
+                    "Sequence": 4
+                  },
+                  {
+                    "Name": "Network Planning Site Reviews",
+                    "Sequence": 5
+                  },
+                  {
+                    "Name": "Obtain Initial Diligence",
+                    "Sequence": 6
+                  },
+                  {
+                    "Name": "Build Valuation Model(s)",
+                    "Sequence": 7
+                  },
+                  {
+                    "Name": "Review Valuation Model(s)",
+                    "Sequence": 8
+                  },
+                  {
+                    "Name": "Review 2 Pager",
+                    "Sequence": 9
+                  },
+                  {
+                    "Name": "Approval from CFO",
+                    "Sequence": 10
+                  },
+                  {
+                    "Name": "Submit Round 1 Bid & LOI",
+                    "Sequence": 11
+                  },
+                  {
+                    "Name": "Site Visit",
+                    "Sequence": 12
+                  },
+                  {
+                    "Name": "Management Meeting",
+                    "Sequence": 14
+                  },
+                  {
+                    "Name": "Request Diligence Questions",
+                    "Sequence": 13
+                  },
+                  {
+                    "Name": "Align with Merchandising",
+                    "Sequence": 15
+                  },
+                  {
+                    "Name": "Align with Construction",
+                    "Sequence": 16
+                  },
+                  {
+                    "Name": "RE Input",
+                    "Sequence": 17
+                  },
+                  {
+                    "Name": "NP Input",
+                    "Sequence": 18
+                  },
+                  {
+                    "Name": "SEI Fuels Input",
+                    "Sequence": 19
+                  },
+                  {
+                    "Name": "Ops Input",
+                    "Sequence": 20
+                  },
+                  {
+                    "Name": "Begin APA Process",
+                    "Sequence": 21
+                  },
+                  {
+                    "Name": "Create Final Valuation Model",
+                    "Sequence": 22
+                  },
+                  {
+                    "Name": "Final 2 Pager",
+                    "Sequence": 23
+                  },
+                  {
+                    "Name": "Approval from CFO",
+                    "Sequence": 24
+                  },
+                  {
+                    "Name": "Submit Round 2 Bid & Revised LOI",
+                    "Sequence": 25
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@variables('arTasks')",
+          "actions": {
+            "Compose": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9cede4a9-81ee-442c-a0e7-7cb0985901cc"
+              },
+              "type": "Compose",
+              "inputs": "@items('Apply_to_each')"
+            },
+            "Add_a_new_row": {
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "07a4085d-301a-4a5e-a5f7-70b53f7db145"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "new_predealplans",
+                  "item/new_name": "@items('Apply_to_each')['Name']",
+                  "item/ownerid@odata.bind": "systemusers(@{triggerOutputs()?['body/_ownerid_value']})",
+                  "item/new_PreDeal@odata.bind": "new_predeals(@{triggerOutputs()?['body/new_predealid']})",
+                  "item/new_sequence": "@items('Apply_to_each')['Sequence']",
+                  "item/statuscode": 100000001
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bec647af-43e7-4cbf-9fe8-471a78a0966b"
+          },
+          "type": "Foreach",
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 25
+            }
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

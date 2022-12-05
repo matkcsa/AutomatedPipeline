@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{22ad49ea-976a-ed11-9562-0022482dbb52}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_name" select="1" icon="1" preview="1">
+        <row name="result" id="new_predealplanid">
+          <cell name="new_sequence" width="100" />
+          <cell name="new_name" width="200" />
+          <cell name="new_planend" width="100" />
+          <cell name="new_planstart" width="100" />
+          <cell name="new_pastdue" width="100" />
+          <cell name="new_milestone" width="100" />
+          <cell name="statuscode" width="100" />
+          <cell name="new_predecessors" width="100" />
+          <cell name="statecode" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="new_predealplan">
+          <attribute name="new_name" />
+          <attribute name="new_predealplanid" />
+          <attribute name="new_planend" />
+          <attribute name="new_planstart" />
+          <attribute name="new_pastdue" />
+          <attribute name="new_milestone" />
+          <attribute name="new_predecessors" />
+          <attribute name="statecode" />
+          <attribute name="statuscode" />
+          <attribute name="new_sequence" />
+          <order attribute="new_sequence" descending="false" />
+          <order attribute="new_planend" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Tasks" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

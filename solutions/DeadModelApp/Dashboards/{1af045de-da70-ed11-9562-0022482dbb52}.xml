@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Power BI Dashboard" languagecode="1033" />
+  </LocalizedNames>
+  <FormId>{1af045de-da70-ed11-9562-0022482dbb52}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="powerbi">
+      <form>
+        <tabs>
+          <tab showlabel="false" verticallayout="true" id="{76df5553-062f-479e-ad12-e476db963506}">
+            <labels>
+              <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showlabel="false" showbar="false" columns="111" id="{14207d8c-c089-4473-a31b-e0c850dc5a27}">
+                    <labels>
+                      <label description="" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="3" rowspan="24" showlabel="false" id="{e782f51e-be1e-4863-8932-bc5806e8699e}" availableforphone="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                          <control id="86689f77-cfca-4ef7-bb8c-0845e097ec63" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{0185f7a1-bb69-47e0-9bf9-2177372155af}"></control>
+                        </cell>
+                      </row>
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <controlDescriptions>
+          <controlDescription forControl="{0185f7a1-bb69-47e0-9bf9-2177372155af}">
+            <customControl formFactor="0" name="MscrmControls.PowerBIPCFControl">
+              <parameters>
+                <PowerBIReport type="PowerBI.Report" static="true">new_375969caa04243c6a2dc00348c91e79a</PowerBIReport>
+              </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.PowerBIPCFControl">
+              <parameters>
+                <PowerBIReport type="PowerBI.Report" static="true">new_375969caa04243c6a2dc00348c91e79a</PowerBIReport>
+              </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.PowerBIPCFControl">
+              <parameters>
+                <PowerBIReport type="PowerBI.Report" static="true">new_375969caa04243c6a2dc00348c91e79a</PowerBIReport>
+              </parameters>
+            </customControl>
+          </controlDescription>
+        </controlDescriptions>
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+</Dashboard>

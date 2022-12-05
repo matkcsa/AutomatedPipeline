@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{58e6184a-426b-ed11-9562-0022482dbd9d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_name" select="1" icon="1" preview="1">
+        <row name="result" id="new_dealid">
+          <cell name="new_name" width="200" />
+          <cell name="new_estimatedsigningdate" width="100" />
+          <cell name="new_estimatedclosingdate" width="100" />
+          <cell name="ownerid" width="100" />
+          <cell name="new_substage" width="100" />
+          <cell name="statuscode" width="100" />
+          <cell name="new_dealtype" width="100" />
+          <cell name="new_primarycontact" width="100" />
+          <cell name="new_apaspa" width="100" />
+          <cell name="new_boardapprovalrequired" width="100" />
+          <cell name="new_approvalreceived" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="new_deal">
+          <attribute name="new_name" />
+          <attribute name="new_dealid" />
+          <attribute name="ownerid" />
+          <attribute name="new_substage" />
+          <attribute name="statuscode" />
+          <attribute name="new_dealtype" />
+          <attribute name="new_apaspa" />
+          <attribute name="new_boardapprovalrequired" />
+          <attribute name="new_approvalreceived" />
+          <attribute name="new_estimatedsigningdate" />
+          <attribute name="new_estimatedclosingdate" />
+          <attribute name="new_primarycontact" />
+          <order attribute="new_estimatedsigningdate" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Deal Fields" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

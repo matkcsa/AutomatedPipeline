@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{c4b06cc1-b469-ed11-9562-0022482db6a3}" Name="M&amp;A Accelerator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/MAAccelerator-C4B06CC1-B469-ED11-9562-0022482DB6A3.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>new_dealpipeline</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <PrimaryEntity>new_PreDeal</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="M&amp;A Accelerator" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{038f5cbc-0886-46f1-a8cd-783163b12487}">
+      <label languagecode="1033" description="Pre-Deal" />
+    </steplabels>
+    <steplabels id="{cb5e85b3-80c4-4d91-a80d-167463a22291}">
+      <label languagecode="1033" description="Deal Type" />
+    </steplabels>
+    <steplabels id="{3d5009eb-39fa-4289-9c7b-225e7bdc085e}">
+      <label languagecode="1033" description="Sub Stage" />
+    </steplabels>
+    <steplabels id="{d0601a6a-7583-417a-a924-9b6d6ac68766}">
+      <label languagecode="1033" description="Deal" />
+    </steplabels>
+    <steplabels id="{b002582b-36c8-4934-acbb-f064ad59b45f}">
+      <label languagecode="1033" description="Name" />
+    </steplabels>
+    <steplabels id="{d53c7685-071b-4235-8fec-3c1f00eefb53}">
+      <label languagecode="1033" description="Integration" />
+    </steplabels>
+    <steplabels id="{f5ebda1a-72e9-455c-acaa-797145899108}">
+      <label languagecode="1033" description="Name" />
+    </steplabels>
+    <steplabels id="{21d1952a-d0e0-4599-be5c-682912adc9eb}">
+      <label languagecode="1033" description="Close" />
+    </steplabels>
+    <steplabels id="{af8ee515-3e60-4cb1-871f-bc49d9d1788d}">
+      <label languagecode="1033" description="Name" />
+    </steplabels>
+  </labels>
+</Workflow>
