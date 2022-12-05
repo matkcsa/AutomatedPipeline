@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InteractionCentricDashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Pre-Deal Dashboard" languagecode="1033" />
+  </LocalizedNames>
+  <FormId>{e3622473-f864-ed11-9562-0022482db4f8}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="interactioncentricdashboard">
+      <form>
+        <tabs filterby="createdon" timeframe="7" primaryentitylogicalname="new_predeal" entityview="{3E3C5314-D635-42E4-BF58-B11795EA7891}" dashboardCategory="2_0" tilespresent="false">
+          <tab name="StreamsContainer" showlabel="true" verticallayout="true" collapsible="false" id="{16f7f03f-2032-4062-96e9-601d84410d63}">
+            <labels>
+              <label description="Streams and Visual Filters" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="25%">
+                <sections>
+                  <section name="Streams" showlabel="true" showbar="false" columns="11" id="{736af6bd-bdca-4508-9f79-c1bd5e747b83}">
+                    <labels>
+                      <label description="Streams" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="2" rowspan="24" showlabel="false" isstreamcell="true" id="{7dedc47d-6891-4b21-8d2e-ad3fcf540fc3}">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                          <control id="Component{5db07819-47a0-deb5-8a82-6c7a189b9216}" classid="{EE9078C8-6946-4E2C-B8F8-35E65F4BE6A8}">
+                            <parameters>
+                              <StreamObjects>
+                                <ShowAsTiles>false</ShowAsTiles>
+                                <StreamObject id="{0689c763-556e-ec63-467e-86306c48de71}" type="1">
+                                  <LogicalEntityName>new_predeal</LogicalEntityName>
+                                  <EntityViewId>{1a5c9606-5c6f-ed11-9562-0022482db65e}</EntityViewId>
+                                </StreamObject>
+                              </StreamObjects>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+              <column width="75%">
+                <sections>
+                  <section name="VisualFilters" showlabel="true" showbar="false" columns="111" id="{7740661a-a163-48b2-888c-229d52db4e94}">
+                    <labels>
+                      <label description="Charts" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="3" rowspan="8" showlabel="false" ischartcell="true" id="{2fc56e5f-1855-4eed-90dc-6b00fcc019cc}" auto="false">
+                          <labels>
+                            <label description="Pre-Deals" languagecode="1033" />
+                          </labels>
+                          <control id="Componentca0d8bb" uniqueid="{11886745-78a4-99ca-1b7e-01515c601125}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_predeal</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>6</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{1A5C9606-5C6F-ED11-9562-0022482DB65E}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{2456E0F9-0770-ED11-9562-0022482DBD9D}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row>
+                        <cell colspan="1" rowspan="8" showlabel="false" ischartcell="true" id="{5eab3c4d-245b-4e0e-b16d-db030b9d97b6}" auto="false">
+                          <labels>
+                            <label description="Pre-Deals" languagecode="1033" />
+                          </labels>
+                          <control id="Component75b7a3f" uniqueid="{27776d2c-6c09-c3e9-8ce5-0c1dcd4dc6ea}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_predeal</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>6</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{3E3C5314-D635-42E4-BF58-B11795EA7891}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{5C9715A8-5D6F-ED11-9562-0022482DB034}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell id="{b029d139-4544-598b-e002-24110e6c0546}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{d12a4d0c-a787-db0b-d608-3bce7a15c3cb}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{1970c24c-233c-0083-2dc5-8874e146194c}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{8a6c1ac4-4aa3-7dd5-dc22-b3e1ec84134b}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{887899cd-2a34-5929-9169-927490a7aa78}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{7c9a78d3-a362-ea10-ccb7-07c869ab67d4}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{bdcd7970-5419-652e-7d8a-31565c875606}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{8a54013a-d557-26c1-1548-601b31d49291}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{9dc035d8-77c3-9066-1964-381caaee5abb}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{c6d56776-7ddb-4c29-d116-e40e7057bc9c}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{d8be29a2-d723-ede3-c143-bb8db13bec50}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{7773dd98-6426-8768-9d19-cc2c5058b509}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{62dbd12c-ba88-da9a-ac64-a22b6acd913a}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{b7435735-4674-1053-0736-209cee0c24bd}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{dd5c0b4c-060e-4ced-74ea-6ced7b69c1b1}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{e8cc0c92-44db-e1ec-61a0-67a25c8d2e4a}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell colspan="1" rowspan="8" showlabel="false" ischartcell="true" id="{5b9a651a-3206-4d51-8a9f-c1ac97478604}" auto="false">
+                          <labels>
+                            <label description="Pre-Deals" languagecode="1033" />
+                          </labels>
+                          <control id="Component4d4c1cf" uniqueid="{5242ad6c-c10a-9363-bd51-89e4058428de}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_predeal</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>6</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{3E3C5314-D635-42E4-BF58-B11795EA7891}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{F9E09742-626F-ED11-9562-0022482DB034}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell id="{8e4d9352-d761-8726-a556-e5a3c7059543}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{4076460a-b81c-1184-12dd-419162e3debb}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{d9868cdb-d8e9-4ec3-5b86-8e532cab0aee}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{cbcc9541-4ee7-164d-6415-761e573146b6}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{660cc4d9-d2eb-11cd-dc32-911b8a4b6285}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{7b25e462-ce09-a1c9-16a2-341207e77752}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{c72d2126-c9c6-9b10-dcc1-782e447ea4b5}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{a8103bde-887e-0316-3884-8777e3135942}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{8a255888-c905-36ed-d237-ace6315e9717}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{b064d385-cd52-9aee-20e2-262cea7a622d}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{4d411dbc-3516-3085-79d6-2bcb085b18bb}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{d1d251e2-11a5-a68a-b2b8-6e24b030a923}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{2ee9aab0-ec68-80ab-ab32-7411a5018124}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{49ab6a5d-d235-243e-7162-48ed49d4133e}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{db706285-1ba7-d541-e095-0b40dd1db9a4}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                        <cell id="{83e877dc-9b0e-31c8-d9cd-b4bd9ba02e9e}" showlabel="false">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+</InteractionCentricDashboard>

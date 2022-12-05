@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{1ab57dd6-5618-49f2-b4b8-0d3dede58b3b}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{038f5cbc-0886-46f1-a8cd-783163b12487}" name="StageStep4" locklevel="0" expanded="true" visible="false" labelid="{a35b0cb3-e9b7-4500-8d03-6aab28a5e54c}">
+          <labels>
+            <label description="Pre-Deal" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{3508d311-5bbc-5b37-9b10-1f9534f8e00d}" name="StageStep4_section1" labelid="{75c19a4b-e5a5-4f52-abdd-b32f67dcc4c4}">
+                  <labels>
+                    <label description="Pre-Deal" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cb5e85b3-80c4-4d91-a80d-167463a22291}" showlabel="true" visible="true" labelid="{b32a30a2-c254-4574-861a-0cb421485ca5}">
+                        <labels>
+                          <label description="Deal Type" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_new_predeal_new_dealpipeline:new_dealtype" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_dealtype" disabled="false" relationship="bpf_new_predeal_new_dealpipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3d5009eb-39fa-4289-9c7b-225e7bdc085e}" showlabel="true" visible="true" labelid="{0bd73760-a1aa-4f03-ab07-c92acbfa29d3}">
+                        <labels>
+                          <label description="Sub Stage" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_new_predeal_new_dealpipeline:new_substage" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_substage" disabled="false" relationship="bpf_new_predeal_new_dealpipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d0601a6a-7583-417a-a924-9b6d6ac68766}" name="StageStep10" locklevel="0" expanded="true" visible="false" labelid="{79537e84-07b6-4d47-ba9e-08a38b96e209}">
+          <labels>
+            <label description="Deal" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{fe91af08-263c-db20-2b88-9160c33a28f9}" name="StageStep10_section1" labelid="{6a55b77d-f8f0-408b-8413-b988374a0f1d}">
+                  <labels>
+                    <label description="Deal" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b002582b-36c8-4934-acbb-f064ad59b45f}" showlabel="true" visible="true" labelid="{d0de7a2e-5aa8-493a-9cfe-4810f18cad83}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_new_deal_new_dealpipeline:new_name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_name" disabled="false" relationship="bpf_new_deal_new_dealpipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{d53c7685-071b-4235-8fec-3c1f00eefb53}" name="StageStep15" locklevel="0" expanded="true" visible="false" labelid="{3a18cedc-2da3-4ef1-8165-6f19e6b217cb}">
+          <labels>
+            <label description="Integration" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0feb0196-d524-5703-f98d-daa0c9065e69}" name="StageStep15_section1" labelid="{ba5abecc-78e1-4829-a922-add62125938b}">
+                  <labels>
+                    <label description="Integration" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f5ebda1a-72e9-455c-acaa-797145899108}" showlabel="true" visible="true" labelid="{5bda895c-fa62-49a4-9d69-14ddb7873b92}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_new_integration_new_dealpipeline:new_name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_name" disabled="false" relationship="bpf_new_integration_new_dealpipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{21d1952a-d0e0-4599-be5c-682912adc9eb}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{00927eca-d835-4414-9d6e-addec6618f3b}">
+          <labels>
+            <label description="Close" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{155bc588-eebe-2dc2-c8d5-5da923e118fd}" name="StageStep19_section1" labelid="{9b6ffe8c-1ecd-42a4-aa8a-dfafdf6aaa09}">
+                  <labels>
+                    <label description="Close" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af8ee515-3e60-4cb1-871f-bc49d9d1788d}" showlabel="true" visible="true" labelid="{695e5ee6-7d52-4a6f-8e8e-817a20a2406f}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_new_integration_new_dealpipeline:new_name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_name" disabled="false" relationship="bpf_new_integration_new_dealpipeline" isrequired="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

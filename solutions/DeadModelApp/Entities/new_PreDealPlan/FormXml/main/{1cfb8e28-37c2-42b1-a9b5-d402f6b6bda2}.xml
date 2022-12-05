@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{1cfb8e28-37c2-42b1-a9b5-d402f6b6bda2}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{344fd9b8-c4b2-43ec-a0fd-8c450be50c5c}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{237212ec-5e61-4c37-b864-620171c913c8}" name="Task">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9f7ff65f-e6a4-424c-9e7f-77adca153c95}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Past Due" languagecode="1033" />
+                        </labels>
+                        <control id="new_pastdue" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="new_pastdue" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5bae767d-09d5-48aa-a4cb-e52ec677a025}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Priority" languagecode="1033" />
+                        </labels>
+                        <control id="new_priority" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_priority" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bd33ea1c-0ff1-46e7-a4bb-3d1b606d9866}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Milestone" languagecode="1033" />
+                        </labels>
+                        <control id="new_milestone" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_milestone" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bb52f028-10b4-4fcf-8c67-f6eef657cdc4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Priority" languagecode="1033" />
+                        </labels>
+                        <control id="new_priority" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_priority" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{11f9ce29-dada-4176-abb2-18eba16e40bb}">
+                        <labels>
+                          <label description="Task Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e24d4380-342f-4050-9b98-81e003e7f7f6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e529498-7b3f-4285-8030-bc64ae8ea45c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Assigned To" languagecode="1033" />
+                        </labels>
+                        <control id="new_assignedto" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_assignedto" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e01fce23-b79e-4e37-9950-fb5195f13179}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Plan Start" languagecode="1033" />
+                        </labels>
+                        <control id="new_planstart" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_planstart" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{db81795c-6c5b-404c-b632-84a3ba0d76f1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Plan End" languagecode="1033" />
+                        </labels>
+                        <control id="new_planend" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_planend" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1e4fc203-5626-411c-90ee-61f3d17f48d9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Actual End" languagecode="1033" />
+                        </labels>
+                        <control id="new_actualend" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_actualend" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5a977685-1568-4db0-b089-cda8f19eef1d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Duration" languagecode="1033" />
+                        </labels>
+                        <control id="new_duration" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="new_duration" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0a677456-6ca5-4623-9078-7ba2e72b56d1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Predecessors" languagecode="1033" />
+                        </labels>
+                        <control id="new_predecessors" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_predecessors" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4b190824-e2e0-48a6-a6b2-f51ef2643db9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pre-Deal" languagecode="1033" />
+                        </labels>
+                        <control id="new_predeal" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_predeal" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ba7a0226-34c9-4531-bb85-622c4d757b47}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{1a070011-8da6-4086-a85c-189c0add72db}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{374e1301-bb30-4193-98f7-633b8ad8bc0a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9fda40f9-f5aa-49ca-bfdd-2bad3a94f38c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0876d74c-0136-4395-a060-befe40fc7670}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{33800fa7-2a67-4381-8e5d-97ef3bdd7fbb}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{05047f0c-3ad1-4f31-b97e-8af39b614cbb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{2ce539e0-0faa-4e54-aa54-acc0ab923391}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1e37942a-7c63-42f2-a21b-24c51e9d5700}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

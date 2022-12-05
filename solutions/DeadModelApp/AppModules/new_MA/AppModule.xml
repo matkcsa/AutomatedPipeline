@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>new_MA</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="expiredprocess" />
+    <AppModuleComponent type="1" schemaName="knowledgearticle" />
+    <AppModuleComponent type="1" schemaName="new_deal" />
+    <AppModuleComponent type="1" schemaName="new_dealpipeline" />
+    <AppModuleComponent type="1" schemaName="new_integration" />
+    <AppModuleComponent type="1" schemaName="new_predeal" />
+    <AppModuleComponent type="1" schemaName="new_predealplan" />
+    <AppModuleComponent type="29" id="{c4b06cc1-b469-ed11-9562-0022482db6a3}" />
+    <AppModuleComponent type="60" id="{1af045de-da70-ed11-9562-0022482dbb52}" />
+    <AppModuleComponent type="62" schemaName="new_MA" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="M&amp;A" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Demo Customer App Please Dont Modify" languagecode="1033" />
+  </Descriptions>
+  <appsettings>
+    <appsetting settingdefinitionid.uniquename="AllowNotificationsEarlyAccess">
+      <iscustomizable>1</iscustomizable>
+      <value>true</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

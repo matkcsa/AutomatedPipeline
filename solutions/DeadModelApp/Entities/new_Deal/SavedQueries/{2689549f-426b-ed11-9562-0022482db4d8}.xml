@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{2689549f-426b-ed11-9562-0022482db4d8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_name" select="1" icon="1" preview="1">
+        <row name="result" id="new_dealid">
+          <cell name="new_name" width="200" />
+          <cell name="ownerid" width="100" />
+          <cell name="new_apaspa" width="100" />
+          <cell name="new_ltmasofdate" width="100" />
+          <cell name="new_ltmebitda" width="100" />
+          <cell name="new_ltmebitdamultiple" width="100" />
+          <cell name="new_purchaseprice" width="100" />
+          <cell name="new_year3usgaaproic" width="100" />
+          <cell name="new_yearaverageusgaaproic" width="100" />
+          <cell name="new_yearaveragejgaaproic" width="100" />
+          <cell name="new_slborsyntheticlease" width="100" />
+          <cell name="new_slborsyntheticleaseterms" width="100" />
+          <cell name="new_insurance" width="100" />
+          <cell name="new_depositamount" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="new_deal">
+          <attribute name="new_name" />
+          <attribute name="new_dealid" />
+          <attribute name="ownerid" />
+          <attribute name="new_apaspa" />
+          <attribute name="new_ltmasofdate" />
+          <attribute name="new_ltmebitda" />
+          <attribute name="new_ltmebitdamultiple" />
+          <attribute name="new_purchaseprice" />
+          <attribute name="new_year3usgaaproic" />
+          <attribute name="new_yearaverageusgaaproic" />
+          <attribute name="new_yearaveragejgaaproic" />
+          <attribute name="new_slborsyntheticlease" />
+          <attribute name="new_slborsyntheticleaseterms" />
+          <attribute name="new_insurance" />
+          <attribute name="new_depositamount" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Financial Deal View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

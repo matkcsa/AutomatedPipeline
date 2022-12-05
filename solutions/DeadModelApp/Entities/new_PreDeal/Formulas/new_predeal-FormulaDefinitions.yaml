@@ -1,0 +1,2 @@
+new_fee: =(new_feesites/ new_totalresites)*100
+new_retailwholesale: =new_totalretailsites + new_totalwholesalesites

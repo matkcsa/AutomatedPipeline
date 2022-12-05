@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Pre-Deal and Deal Dashboard" languagecode="1033" />
+  </LocalizedNames>
+  <FormId>{515d6f14-0570-ed11-9562-0022482dbd9d}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="dashboard">
+      <form>
+        <tabs>
+          <tab showlabel="false" verticallayout="true" id="{90b10c45-6bc2-401f-9bbc-5cd78b618314}">
+            <labels>
+              <label description="Tab" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showlabel="false" showbar="false" columns="1111" id="{4582d669-0d00-431b-8217-8487ef1fed8f}" name="{4582d669-0d00-431b-8217-8487ef1fed8f}" locklevel="0" labelwidth="130">
+                    <labels>
+                      <label description="Section" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{03eef557-3a2e-4e5a-8d55-51b7641fe119}" auto="false">
+                          <labels>
+                            <label description="Pre-Deal" languagecode="1033" />
+                          </labels>
+                          <control id="Componentf331356" uniqueid="{8902d99e-7c32-12ec-7a38-a09db19d62a9}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_predeal</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                              <ViewId>{1A5C9606-5C6F-ED11-9562-0022482DB65E}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{1A5C9606-5C6F-ED11-9562-0022482DB65E}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{5C9715A8-5D6F-ED11-9562-0022482DB034}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{ac9966aa-f24c-4a4a-a5fe-a2f990f611da}" auto="false">
+                          <labels>
+                            <label description="Pre-Deal" languagecode="1033" />
+                          </labels>
+                          <control id="Component8012c2b" uniqueid="{4cba158c-8d8a-98c5-2824-0329d3926e80}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_predeal</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                              <ViewId>{1A5C9606-5C6F-ED11-9562-0022482DB65E}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{1A5C9606-5C6F-ED11-9562-0022482DB65E}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{2456E0F9-0770-ED11-9562-0022482DBD9D}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>true</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{31bceb30-ad8a-4a9a-b1ce-021e77976b99}" auto="false">
+                          <labels>
+                            <label description="Deal" languagecode="1033" />
+                          </labels>
+                          <control id="Componenta0db66d" uniqueid="{4b76bdb6-8123-5a40-8700-9084c728b9d1}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_deal</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>10</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{58E6184A-426B-ED11-9562-0022482DBD9D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{6004E37D-0470-ED11-9562-0022482DBD9D}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{e2e6ea46-a815-428a-a271-4feaf68468a1}" auto="false">
+                          <labels>
+                            <label description="Pre-Deals" languagecode="1033" />
+                          </labels>
+                          <control id="Component548881d" uniqueid="{b76293a6-8812-7b9b-4a23-99523daaee69}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_predeal</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{1A5C9606-5C6F-ED11-9562-0022482DB65E}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{9379ea5b-e2cc-46de-b08e-71d323a9c092}" auto="false">
+                          <labels>
+                            <label description="Deals" languagecode="1033" />
+                          </labels>
+                          <control id="Componenta56d2f0" uniqueid="{ce92058a-549a-c119-134c-e5c4421586c7}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>new_deal</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{E3D19FBC-A43E-4F29-ACD5-1A9F1534B248}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsTabletEnabled>1</IsTabletEnabled>
+</Dashboard>

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.22104.224" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>DeadModelApp</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Deal Model App" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.2</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>DefaultPublisherorgede4f8fe</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Default Publisher for orgede4f8fe" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Default publisher for this organization" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>new</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="contact" behavior="2" />
+      <RootComponent type="1" schemaName="cr873_state" behavior="1" />
+      <RootComponent type="1" schemaName="new_deal" behavior="0" />
+      <RootComponent type="1" schemaName="new_dealpipeline" behavior="0" />
+      <RootComponent type="1" schemaName="new_integration" behavior="0" />
+      <RootComponent type="1" schemaName="new_pipeline" behavior="0" />
+      <RootComponent type="1" schemaName="new_predeal" behavior="0" />
+      <RootComponent type="1" schemaName="new_predealplan" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="1" />
+      <RootComponent type="29" id="{062f975c-8a66-ed11-9562-0022482db034}" behavior="0" />
+      <RootComponent type="29" id="{16d64473-0366-ed11-9562-0022482db6d6}" behavior="0" />
+      <RootComponent type="29" id="{6aeaaea8-8b6a-ed11-9562-0022482db015}" behavior="0" />
+      <RootComponent type="29" id="{c4b06cc1-b469-ed11-9562-0022482db6a3}" behavior="0" />
+      <RootComponent type="29" id="{c80759e6-0266-ed11-9562-0022482db6d6}" behavior="0" />
+      <RootComponent type="29" id="{f5ae144d-fe14-4de2-a727-f392cf994808}" behavior="0" />
+      <RootComponent type="29" id="{fefdf47a-8766-ed11-9562-0022482db6a3}" behavior="0" />
+      <RootComponent type="60" id="{1af045de-da70-ed11-9562-0022482dbb52}" behavior="0" />
+      <RootComponent type="60" id="{515d6f14-0570-ed11-9562-0022482dbd9d}" behavior="0" />
+      <RootComponent type="60" id="{e3622473-f864-ed11-9562-0022482db4f8}" behavior="0" />
+      <RootComponent type="62" schemaName="new_MA" behavior="0" />
+      <RootComponent type="80" schemaName="new_MA" behavior="0" />
+      <RootComponent type="9" schemaName="new_apaspa" behavior="0" />
+      <RootComponent type="9" schemaName="new_approvallevel" behavior="0" />
+      <RootComponent type="9" schemaName="new_dealtype" behavior="0" />
+      <RootComponent type="9" schemaName="new_insurance" behavior="0" />
+      <RootComponent type="9" schemaName="new_traditionalnontraditional" behavior="0" />
+      <RootComponent type="9" schemaName="new_truefalse" behavior="0" />
+      <RootComponent type="9" schemaName="new_yesnoblank" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="cr873_state" displayName="State/Province" solution="Active" />
+        <Dependent type="1" schemaName="cr873_state" displayName="State/Province" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="cr873_new_Deal_new_Deal_Contact" displayName="cr873_new_Deal_new_Deal_Contact" parentSchemaName="new_deal" parentDisplayName="Deal" solution="Active" />
+        <Dependent type="2" schemaName="cr873_new_deal" displayName="Deal" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="10" schemaName="cr873_new_PreDeal_new_PreDeal_Contact" displayName="cr873_new_PreDeal_new_PreDeal_Contact" parentSchemaName="new_predeal" parentDisplayName="Pre-Deal" solution="Active" />
+        <Dependent type="2" schemaName="cr873_new_predeal" displayName="Pre-Deal" parentSchemaName="contact" parentDisplayName="Contact" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="cr873_name" displayName="Name" parentSchemaName="cr873_state" parentDisplayName="State/Province" solution="Active" />
+        <Dependent type="26" schemaName="Active States/Provinces" displayName="Active States/Provinces" parentSchemaName="cr873_state" parentDisplayName="State/Province" id="{5ef15235-b266-ed11-9562-0022482dbe8d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="cr873_name" displayName="Name" parentSchemaName="cr873_state" parentDisplayName="State/Province" solution="Active" />
+        <Dependent type="26" schemaName="Active States" displayName="Active States" parentSchemaName="cr873_state" parentDisplayName="State/Province" id="{cfb5fecb-970b-4087-8575-6e09b6c39cd0}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="cr873_picture" displayName="Picture" parentSchemaName="contact" parentDisplayName="Contact" solution="Active" />
+        <Dependent type="60" displayName="Pre-Deal Contact Form" parentDisplayName="Contact" id="{32aabdf4-0466-ed11-9562-0022482db65e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="cr873_stateid" displayName="State" parentSchemaName="cr873_state" parentDisplayName="State/Province" solution="Active" />
+        <Dependent type="26" schemaName="Active States/Provinces" displayName="Active States/Provinces" parentSchemaName="cr873_state" parentDisplayName="State/Province" id="{5ef15235-b266-ed11-9562-0022482dbe8d}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="cr873_stateid" displayName="State" parentSchemaName="cr873_state" parentDisplayName="State/Province" solution="Active" />
+        <Dependent type="26" schemaName="Active States" displayName="Active States" parentSchemaName="cr873_state" parentDisplayName="State/Province" id="{cfb5fecb-970b-4087-8575-6e09b6c39cd0}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="statecode" displayName="Status" parentSchemaName="cr873_state" parentDisplayName="State/Province" solution="Active" />
+        <Dependent type="26" schemaName="Active States" displayName="Active States" parentSchemaName="cr873_state" parentDisplayName="State/Province" id="{cfb5fecb-970b-4087-8575-6e09b6c39cd0}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{707fc57b-c5e6-471b-a180-e37ed28a38e2}">
+          <package>msdynce_AppCommonAnchor (9.0.22103.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="contact card" parentDisplayName="Contact" id="{707fc57b-c5e6-471b-a180-e37ed28a38e2}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Contact Card form" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf}">
+          <package>msdynce_AppCommonAnchor (9.0.22103.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Contact Card form" parentDisplayName="Contact" id="{bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="new_MA" displayName="M&amp;A" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Deal" id="{4fa3d62f-4c81-4666-83ce-19b61c72f067}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Dependent type="68" id="{4cad2b09-8d15-4c56-a76a-c7b9f527da08}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Dependent type="68" id="{9c1eb11c-18f2-4300-a012-7c6a6dcb0fc7}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.OptionSet.OptionSetControl" displayName="MscrmControls.OptionSet.OptionSetControl" solution="CustomControlsCore (9.2.22104.00224)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Rating.StarRatingControl" displayName="MscrmControls.Rating.StarRatingControl" solution="CustomControlsCore (9.2.22104.00224)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.RichTextEditor.RichTextEditorControl" displayName="MscrmControls.RichTextEditor.RichTextEditorControl" solution="msdyn_RichTextEditor (1.0.0.2017)" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="9" schemaName="cr873_priority" displayName="Priority" solution="Active" />
+        <Dependent type="2" schemaName="cr873_priority" displayName="Priority" parentSchemaName="new_predeal" parentDisplayName="Pre-Deal" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="9" schemaName="cr873_priority" displayName="Priority" solution="Active" />
+        <Dependent type="2" schemaName="new_priority" displayName="Priority" parentSchemaName="new_predealplan" parentDisplayName="Plan Task" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedcommondataserviceforapps_e78da" solution="Active" id.connectionreferencelogicalname="new_sharedcommondataserviceforapps_e78da" />
+        <Dependent type="29" displayName="Pre-Deal Create Tasks" id="{062f975c-8a66-ed11-9562-0022482db034}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedcommondataserviceforapps_e78da" solution="Active" id.connectionreferencelogicalname="new_sharedcommondataserviceforapps_e78da" />
+        <Dependent type="29" displayName="Deal on Create Tasks and Associations" id="{6aeaaea8-8b6a-ed11-9562-0022482db015}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="powerbireport" displayName="new_375969caa04243c6a2dc00348c91e79a" solution="Active" id.uniquename="new_375969caa04243c6a2dc00348c91e79a" />
+        <Dependent type="60" displayName="Power BI Dashboard" id="{1af045de-da70-ed11-9562-0022482dbb52}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AllowNotificationsEarlyAccess" solution="AppNotifications (10.0.0.10)" id.uniquename="AllowNotificationsEarlyAccess" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=new_MA,settingdefinitionid.uniquename=AllowNotificationsEarlyAccess" id.parentappmoduleid.uniquename="new_MA" id.settingdefinitionid.uniquename="AllowNotificationsEarlyAccess" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

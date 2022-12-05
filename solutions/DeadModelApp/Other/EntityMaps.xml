@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityMaps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityMap>
+    <EntitySource>new_predeal</EntitySource>
+    <EntityTarget>new_deal</EntityTarget>
+    <AttributeMaps>
+      <AttributeMap>
+        <AttributeSource>new_dealtype</AttributeSource>
+        <AttributeTarget>new_dealtype</AttributeTarget>
+      </AttributeMap>
+      <AttributeMap>
+        <AttributeSource>new_name</AttributeSource>
+        <AttributeTarget>new_name</AttributeTarget>
+      </AttributeMap>
+      <AttributeMap>
+        <AttributeSource>new_primarycontact</AttributeSource>
+        <AttributeTarget>new_primarycontact</AttributeTarget>
+      </AttributeMap>
+      <AttributeMap>
+        <AttributeSource>ownerid</AttributeSource>
+        <AttributeTarget>ownerid</AttributeTarget>
+      </AttributeMap>
+    </AttributeMaps>
+  </EntityMap>
+</EntityMaps>

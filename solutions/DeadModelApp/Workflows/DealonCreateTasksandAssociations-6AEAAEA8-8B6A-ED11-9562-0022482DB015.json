@@ -1,0 +1,343 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_e78da"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "a7c0e2ec-3a48-4fc6-863c-1977e2a51aa8"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "new_deal",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Initialize_variable": {
+          "runAfter": {
+            "Apply_to_each_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a1489c39-6c41-4cba-90d3-5b825e52780f"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "arTasks",
+                "type": "array",
+                "value": [
+                  {
+                    "Name": "Shared Draft APA to Legal",
+                    "Sequence": 1
+                  },
+                  {
+                    "Name": "Review APA",
+                    "Sequence": 2
+                  },
+                  {
+                    "Name": "Submit Redline APA",
+                    "Sequence": 3
+                  },
+                  {
+                    "Name": "Send Redline APA to Legal",
+                    "Sequence": 4
+                  },
+                  {
+                    "Name": "Review Redline APA",
+                    "Sequence": 5
+                  },
+                  {
+                    "Name": "APA/Pre-Diligence",
+                    "Sequence": 6
+                  },
+                  {
+                    "Name": "Legal Diligence",
+                    "Sequence": 7
+                  },
+                  {
+                    "Name": "Financial Diligence",
+                    "Sequence": 8
+                  },
+                  {
+                    "Name": "R&W Quote Obtained",
+                    "Sequence": 9
+                  },
+                  {
+                    "Name": "R&W Policy Obtained",
+                    "Sequence": 10
+                  },
+                  {
+                    "Name": "Accounting Review and Sign-Off",
+                    "Sequence": 11
+                  },
+                  {
+                    "Name": "Tax Review and Sign-Off",
+                    "Sequence": 12
+                  },
+                  {
+                    "Name": "SEI Fuels Review and Sign-Off",
+                    "Sequence": 14
+                  },
+                  {
+                    "Name": "Ops Review and Sign-Off",
+                    "Sequence": 13
+                  },
+                  {
+                    "Name": "Legal Review",
+                    "Sequence": 15
+                  },
+                  {
+                    "Name": "Sign Off",
+                    "Sequence": 16
+                  },
+                  {
+                    "Name": "Finalize",
+                    "Sequence": 17
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@variables('arTasks')",
+          "actions": {
+            "Compose": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9cede4a9-81ee-442c-a0e7-7cb0985901cc"
+              },
+              "type": "Compose",
+              "inputs": "@items('Apply_to_each')"
+            },
+            "Add_a_new_row": {
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8ac21dce-cbc1-429d-b5d0-68e075c11da6"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "new_predealplans",
+                  "item/new_name": "@items('Apply_to_each')['Name']",
+                  "item/new_Deal@odata.bind": "new_deals(@{triggerOutputs()?['body/new_dealid']})",
+                  "item/ownerid@odata.bind": "systemusers(@{triggerOutputs()?['body/_ownerid_value']})",
+                  "item/new_sequence": "@items('Apply_to_each')['Sequence']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bec647af-43e7-4cbf-9fe8-471a78a0966b"
+          },
+          "type": "Foreach",
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 25
+            }
+          }
+        },
+        "Get_a_row_by_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "c9248905-c2e2-45bb-8caa-027059df7104"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "new_predeals",
+              "recordId": "@triggerOutputs()?['body/_new_predeal_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows": {
+          "runAfter": {
+            "Apply_to_each_3": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2dbf36dd-84f7-42c6-a308-fd5f23f7a86c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts",
+              "$select": "contactid",
+              "$filter": "_cr873_new_predeal_value eq @{outputs('Get_a_row_by_ID')?['body/new_predealid']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each_2": {
+          "foreach": "@outputs('List_rows')?['body/value']",
+          "actions": {
+            "Update_a_row": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d5c46b07-542b-45f0-ac48-94e3c8784842"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@items('Apply_to_each_2')?['contactid']",
+                  "item/cr873_new_Deal@odata.bind": "new_deals(@{triggerOutputs()?['body/new_dealid']})"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "98a01ec2-aa0f-4b09-b2e3-c9fd38e83c66"
+          },
+          "type": "Foreach"
+        },
+        "List_rows_2": {
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a5337c8c-b824-4705-8b47-5c68c77c584d"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "new_cr873_state_new_predealset",
+              "$filter": "new_predealid eq @{outputs('Get_a_row_by_ID')?['body/new_predealid']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each_3": {
+          "foreach": "@outputs('List_rows_2')?['body/value']",
+          "actions": {
+            "Compose_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "b552d701-b25d-412e-bd08-b443c52ac344"
+              },
+              "type": "Compose",
+              "inputs": "@items('Apply_to_each_3')"
+            },
+            "Relate_rows": {
+              "runAfter": {
+                "Compose_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ca3b3843-f511-4141-999e-6962355d3bcd"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "cr873_states",
+                  "recordId": "@items('Apply_to_each_3')?['cr873_stateid']",
+                  "associationEntityRelationship": "new_cr873_State_new_Deal_new_Deal",
+                  "item/@odata.id": "https://orgede4f8fe.crm.dynamics.com/api/data/v9.1/new_deals(@{triggerOutputs()?['body/new_dealid']})"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "38d091d3-8094-494e-a5ef-e0d3b8bb148c"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

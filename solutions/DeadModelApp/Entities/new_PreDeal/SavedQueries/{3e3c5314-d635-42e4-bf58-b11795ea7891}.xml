@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{3e3c5314-d635-42e4-bf58-b11795ea7891}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_name" select="1" icon="1" preview="1">
+        <row name="result" id="new_predealid">
+          <cell name="new_name" width="300" />
+          <cell name="new_substage" width="100" />
+          <cell name="new_primarycontact" width="140" />
+          <cell name="new_dealtype" width="100" />
+          <cell name="new_predealdealtype" width="157" />
+          <cell name="new_round1bidsubmitted" width="183" />
+          <cell name="new_round2bidsubmitted" width="176" />
+          <cell name="new_wonbidloiagreeddate" width="209" />
+          <cell name="statuscode" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_predeal">
+          <attribute name="new_predealid" />
+          <attribute name="new_name" />
+          <order attribute="new_name" descending="false" />
+          <attribute name="new_primarycontact" />
+          <attribute name="new_predealdealtype" />
+          <attribute name="new_round1bidsubmitted" />
+          <attribute name="new_round2bidsubmitted" />
+          <attribute name="new_wonbidloiagreeddate" />
+          <attribute name="new_substage" />
+          <attribute name="statuscode" />
+          <attribute name="new_dealtype" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Pre-Deals" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
