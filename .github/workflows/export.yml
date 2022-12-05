@@ -17,6 +17,19 @@ name: export-check-unpack-branch
 on:
   repository_dispatch:
     types: [my-event]
+    inputs:
+      solution_exported_folder:
+        description: 'folder name for staging the exported solution'
+        required: true
+        default: out/exported/
+      solution_folder:
+        description: 'staging the unpacked solution folder before check-in'
+        required: true
+        default: out/solutions/
+      solution_target_folder: 
+       description: 'folder name to be created and checked in'
+       required: true
+       default: solutions/
     
 
   workflow_dispatch:
