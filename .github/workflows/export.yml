@@ -62,11 +62,6 @@ jobs:
       with:
         lfs: true
         
-    - name: Echo in file
-      run: echo ${{ github.event.client_payload.solution_name }}
-           echo ${{ github.event.client_payload.DevEnvironmentUrl }}
-           echo ${{ github.event.inputs.solution_exported_folder}}
-
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
@@ -83,7 +78,7 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{secrets.TenantID}}
         solution-name: ${{ github.event.client_payload.solution_name }}
-        solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.client_payload.solution_name }}.zip
+        solution-output-file: out/exported/${{ github.event.client_payload.solution_name }}.zip
         managed: false
         
     - name: check-solution action
@@ -93,24 +88,21 @@ jobs:
        app-id: ${{secrets.ClientID}}
        client-secret: ${{ secrets.PowerPlatformSPN }}
        tenant-id: ${{secrets.TenantID}}
-       path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.client_payload.solution_name }}.zip
+       path: out/exported/${{ github.event.client_payload.solution_name }}.zip
         
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.client_payload.solution_name }}.zip
-        solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
+        solution-file: out/exported/${{ github.event.client_payload.solution_name }}.zip
+        solution-folder: out/solutions/${{ github.event.client_payload.solution_name }}
         solution-type: 'Unmanaged'
         overwrite-files: true
         
-    - name: Echo in file 2 
-      run: echo ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
-           echo ${{ github.event.inputs.solution_target_folder}}/${{ github.event.client_payload.solution_name }}
-           
+ 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
-        solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
-        solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.client_payload.solution_name }}
+        solution-folder: out/solutions/${{ github.event.client_payload.solution_name }}
+        solution-target-folder: solutions/${{ github.event.client_payload.solution_name }}
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
