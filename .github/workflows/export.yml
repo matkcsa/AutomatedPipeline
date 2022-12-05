@@ -49,7 +49,7 @@ jobs:
       with:
         lfs: true
         
-    - name: "Echo in file" 
+    - name: Echo in file
       run: echo ${{ github.event.client_payload.solution_name }}
            echo ${{ github.event.client_payload.DevEnvironmentUrl }}
            echo ${{ github.event.inputs.solution_exported_folder}}
@@ -89,7 +89,11 @@ jobs:
         solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
         solution-type: 'Unmanaged'
         overwrite-files: true
-
+        
+    - name: Echo in file 2 
+      run: echo ${{ github.event.inputs.solution_folder}}/${{ github.event.client_payload.solution_name }}
+           echo ${{ github.event.inputs.solution_target_folder}}/${{ github.event.client_payload.solution_name }}
+           
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
