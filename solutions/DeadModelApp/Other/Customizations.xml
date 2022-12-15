@@ -5,6 +5,7 @@
   <Workflows />
   <FieldSecurityProfiles />
   <Templates />
+  <RibbonDiffXml />
   <EntityImageConfigs>
     <EntityImageConfig>
       <parententitylogicalname>contact</parententitylogicalname>
@@ -21,6 +22,7 @@
   <AppModuleSiteMaps />
   <AppModules />
   <EntityDataProviders />
+  <CanvasApps />
   <Languages>
     <Language>1033</Language>
   </Languages>

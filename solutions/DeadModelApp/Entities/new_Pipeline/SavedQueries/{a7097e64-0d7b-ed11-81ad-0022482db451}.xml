@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a7097e64-0d7b-ed11-81ad-0022482db451}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_entrynumber" select="1" icon="1" preview="1">
+        <row name="result" id="new_pipelineid">
+          <cell name="new_deallifecyclestage" width="179" />
+          <cell name="new_dealsubstage" width="148" />
+          <cell name="new_projectname" width="128" />
+          <cell name="new_company" width="100" />
+          <cell name="new_primarygeography" width="143" />
+          <cell name="new_assetbreakdown" width="140" />
+          <cell name="new_retailsites" width="100" />
+          <cell name="new_wholesalesites" width="125" />
+          <cell name="new_feecount" width="100" />
+          <cell name="new_leasecount" width="100" />
+          <cell name="new_fee" width="100" />
+          <cell name="new_dealtype" width="100" />
+          <cell name="new_ndasigneddate" width="157" />
+          <cell name="new_currentbiddeadline" width="162" />
+          <cell name="new_deadonholddate" width="160" />
+          <cell name="new_bidacceptancedate" width="165" />
+          <cell name="new_closedate" width="100" />
+          <cell name="new_mryebitdamillions" width="100" />
+          <cell name="new_estimatedpurchasepricemultiple" width="100" />
+          <cell name="new_estimatepurchasepricemillions" width="100" />
+          <cell name="new_broker" width="100" />
+          <cell name="new_dealteam1" width="100" />
+          <cell name="new_dealteam2" width="100" />
+          <cell name="new_dealteam3" width="100" />
+          <cell name="new_comments" width="100" />
+          <cell name="new_maonlycomments" width="163" />
+          <cell name="new_teamsprojectfolder" width="156" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="new_pipeline">
+          <attribute name="new_pipelineid" />
+          <attribute name="new_deallifecyclestage" />
+          <attribute name="new_dealsubstage" />
+          <attribute name="new_projectname" />
+          <attribute name="new_company" />
+          <attribute name="new_primarygeography" />
+          <attribute name="new_assetbreakdown" />
+          <attribute name="new_retailsites" />
+          <attribute name="new_wholesalesites" />
+          <attribute name="new_feecount" />
+          <attribute name="new_leasecount" />
+          <attribute name="new_fee" />
+          <attribute name="new_dealtype" />
+          <attribute name="new_ndasigneddate" />
+          <attribute name="new_currentbiddeadline" />
+          <attribute name="new_deadonholddate" />
+          <attribute name="new_bidacceptancedate" />
+          <attribute name="new_closedate" />
+          <attribute name="new_mryebitdamillions" />
+          <attribute name="new_estimatedpurchasepricemultiple" />
+          <attribute name="new_estimatepurchasepricemillions" />
+          <attribute name="new_broker" />
+          <attribute name="new_dealteam1" />
+          <attribute name="new_dealteam2" />
+          <attribute name="new_dealteam3" />
+          <attribute name="new_comments" />
+          <attribute name="new_maonlycomments" />
+          <attribute name="new_teamsprojectfolder" />
+          <order attribute="new_deallifecyclestage" descending="false" />
+          <order attribute="new_dealsubstage" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.2</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Intake and Status" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

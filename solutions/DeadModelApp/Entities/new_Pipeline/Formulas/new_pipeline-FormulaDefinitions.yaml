@@ -1,0 +1,3 @@
+new_estimatepurchasepricemillions: =new_mryebitdamillions * new_estimatedpurchasepricemultiple
+new_fee: =(new_feecount / new_totalresites)*100
+new_totalresites: =new_feecount + new_leasecount

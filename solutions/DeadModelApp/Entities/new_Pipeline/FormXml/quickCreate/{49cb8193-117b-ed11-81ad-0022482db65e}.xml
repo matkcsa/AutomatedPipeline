@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{49cb8193-117b-ed11-81ad-0022482db65e}</formid>
+    <IntroducedVersion>1.0.0.2</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{e1fededb-b7ee-4328-b77d-f6ecd1629252}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{b08ed38c-47ef-4793-bf4b-17cb8a316b7d}">
+                  <labels>
+                    <label description="Company Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cb19ccab-e9f8-4c33-aa31-4103490c54d7}" locklevel="0" colspan="1" rowspan="1" labelid="{f9e27869-b311-4adf-9845-6ceec5448818}">
+                        <labels>
+                          <label description="Entry Number" languagecode="1033" />
+                        </labels>
+                        <control id="new_entrynumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_entrynumber" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b51a40f7-3d48-45dd-883c-88b81934b562}" locklevel="0" colspan="1" rowspan="1" labelid="{a2a1f5d1-7330-4fc9-950e-6e4cbc31cb23}">
+                        <labels>
+                          <label description="Company" languagecode="1033" />
+                        </labels>
+                        <control id="new_company" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_company" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b82492bb-750d-464b-8f1e-5f3d21895b0d}" locklevel="0" colspan="1" rowspan="1" labelid="{975784a4-f28d-4192-975f-9578c01077d9}">
+                        <labels>
+                          <label description="Primary Geography" languagecode="1033" />
+                        </labels>
+                        <control id="new_primarygeography" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="new_primarygeography" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f5435bf8-b3d3-4224-9886-438da251f50d}" locklevel="0" colspan="1" rowspan="1" labelid="{8e8fb7aa-c9ca-4372-b5c7-ff2471bdeeea}">
+                        <labels>
+                          <label description="Retail Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_retailsites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_retailsites" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{07d065ef-5f13-40d2-a3d6-5803cd7dd49a}" locklevel="0" colspan="1" rowspan="1" labelid="{7f97eb72-d3d9-4697-ad45-c30238fb022e}">
+                        <labels>
+                          <label description="Wholesale Sites" languagecode="1033" />
+                        </labels>
+                        <control id="new_wholesalesites" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_wholesalesites" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cc7882f8-7fc7-4284-8893-7a31b02c6ccc}" locklevel="0" colspan="1" rowspan="1" labelid="{ea6a9cbd-1b22-441f-b526-8ff50e3aea5b}">
+                        <labels>
+                          <label description="Lease Count" languagecode="1033" />
+                        </labels>
+                        <control id="new_leasecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_leasecount" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{076156d7-382a-4c1e-a9f5-63525f9e2dce}">
+                  <labels>
+                    <label description="Comments" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{718c6ba0-c1aa-4e84-a398-5add5cc41d8d}" locklevel="0" colspan="1" rowspan="1" labelid="{1ff0eb39-a737-4f1c-8ac3-59023ebc801d}">
+                        <labels>
+                          <label description="Comments" languagecode="1033" />
+                        </labels>
+                        <control id="new_comments" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="new_comments" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c936a390-07b5-4518-aed2-5083f8e66efb}" locklevel="0" colspan="1" rowspan="1" labelid="{d32e1192-614c-4103-8674-6028823bb562}">
+                        <labels>
+                          <label description="M&amp;A Only Comments" languagecode="1033" />
+                        </labels>
+                        <control id="new_maonlycomments" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="new_maonlycomments" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{5193beb7-2616-446f-87c8-deec55ad1e68}">
+                  <labels>
+                    <label description="Other Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f3a9604e-ac0c-4964-a9a4-fc4985eea701}" locklevel="0" colspan="1" rowspan="1" labelid="{c156a597-4d04-4dd7-a072-da1731ef2840}">
+                        <labels>
+                          <label description="Teams Project Folder" languagecode="1033" />
+                        </labels>
+                        <control id="new_teamsprojectfolder" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="new_teamsprojectfolder" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Pipeline quick create form" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

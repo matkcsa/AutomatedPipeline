@@ -27,7 +27,7 @@
                           <labels>
                             <label description="" languagecode="1033" />
                           </labels>
-                          <control id="86689f77-cfca-4ef7-bb8c-0845e097ec63" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{0185f7a1-bb69-47e0-9bf9-2177372155af}"></control>
+                          <control id="86689f77-cfca-4ef7-bb8c-0845e097ec63" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{0185f7a1-bb69-47e0-9bf9-2177372155af}" />
                         </cell>
                       </row>
                     </rows>
@@ -60,5 +60,5 @@
     </forms>
   </FormXml>
   <IntroducedVersion>1.0.0.0</IntroducedVersion>
-  <IsTabletEnabled>0</IsTabletEnabled>
+  <IsTabletEnabled>1</IsTabletEnabled>
 </Dashboard>

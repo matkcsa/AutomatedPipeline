@@ -7,82 +7,66 @@
     <FormActivationState>1</FormActivationState>
     <form headerdensity="HighWithControls">
       <tabs>
-        <tab verticallayout="true" id="{3ffa9a98-36f8-4654-9e33-a5adfd54a442}" IsUserDefined="1">
+        <tab verticallayout="true" id="{3ffa9a98-36f8-4654-9e33-a5adfd54a442}" IsUserDefined="1" name="asdfasdfa">
           <labels>
-            <label description="General" languagecode="1033" />
+            <label description="Comments" languagecode="1033" />
           </labels>
           <columns>
             <column width="100%">
               <sections>
-                <section showlabel="false" showbar="false" IsUserDefined="0" id="{872df267-1806-452e-aac5-68f5a5f773df}">
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{872df267-1806-452e-aac5-68f5a5f773df}" name="qwrfasdf">
                   <labels>
                     <label description="General" languagecode="1033" />
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{db2019a1-5d05-4aaf-9abf-9040047e6f77}">
+                      <cell id="{dc6864af-81b8-40f9-8b4f-0947ec0a8c9f}" locklevel="0" colspan="1" rowspan="6">
                         <labels>
-                          <label description="Entry Number" languagecode="1033" />
+                          <label description="Comments" languagecode="1033" />
                         </labels>
-                        <control id="new_entrynumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_entrynumber" />
+                        <control id="new_comments" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="new_comments" disabled="false" />
                       </cell>
                     </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
                     <row>
-                      <cell id="{a946523d-4851-4c62-abd6-8cf7acf8e554}">
+                      <cell id="{cbe59d4d-7153-494b-b4eb-8d6abc76315e}" locklevel="0" colspan="1" rowspan="6">
                         <labels>
-                          <label description="Owner" languagecode="1033" />
+                          <label description="M&amp;A Only Comments" languagecode="1033" />
                         </labels>
-                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                        <control id="new_maonlycomments" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="new_maonlycomments" disabled="false" />
                       </cell>
                     </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
                     <row>
-                      <cell id="{a4386c68-406b-43fe-8f26-c6769d5c26e2}" locklevel="0" colspan="1" rowspan="1">
+                      <cell locklevel="0" id="{1a1f657a-d627-4911-a6be-38bfe9c03b8c}" rowspan="15" colspan="1">
                         <labels>
-                          <label description="Pre-Deal" languagecode="1033" />
+                          <label description="Note Text" languagecode="1033" />
                         </labels>
-                        <control id="new_predeal" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_predeal" disabled="false" />
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false" />
                       </cell>
                     </row>
-                    <row>
-                      <cell id="{2f554746-4818-4fc0-9302-0adcab996750}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Pre-Deal Status" languagecode="1033" />
-                        </labels>
-                        <control id="new_predealstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_predealstatus" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{ed35b2c3-14c3-4b7c-9280-0ae87ee67ba1}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Deal" languagecode="1033" />
-                        </labels>
-                        <control id="new_deal" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_deal" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{293e4a13-5eac-4baf-9d36-859ca56a8476}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Deal Status" languagecode="1033" />
-                        </labels>
-                        <control id="new_dealstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_dealstatus" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{b970845b-0b1c-4de3-9f19-c39044c4fdb6}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Integration" languagecode="1033" />
-                        </labels>
-                        <control id="new_integration" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_integration" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{6a578534-8a27-454f-9e2f-ae6fc8fb4697}" locklevel="0" colspan="1" rowspan="1">
-                        <labels>
-                          <label description="Integration Status" languagecode="1033" />
-                        </labels>
-                        <control id="new_integrationstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_integrationstatus" disabled="false" />
-                      </cell>
-                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
                   </rows>
                 </section>
               </sections>
@@ -107,6 +91,18 @@
               <labels>
                 <label description="" languagecode="1033" />
               </labels>
+            </cell>
+            <cell id="{a946523d-4851-4c62-abd6-8cf7acf8e554}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+            <cell id="{db2019a1-5d05-4aaf-9abf-9040047e6f77}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Entry Number" languagecode="1033" />
+              </labels>
+              <control id="header_new_entrynumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_entrynumber" />
             </cell>
           </row>
         </rows>

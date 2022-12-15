@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22104.224" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22105.202" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>DeadModelApp</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Deal Model App" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.2</Version>
+    <Version>1.0.0.3</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>DefaultPublisherorgede4f8fe</UniqueName>
@@ -96,15 +96,23 @@
       <RootComponent type="29" id="{c80759e6-0266-ed11-9562-0022482db6d6}" behavior="0" />
       <RootComponent type="29" id="{f5ae144d-fe14-4de2-a727-f392cf994808}" behavior="0" />
       <RootComponent type="29" id="{fefdf47a-8766-ed11-9562-0022482db6a3}" behavior="0" />
+      <RootComponent type="300" schemaName="new_smartsheetsdefaultcommandlibrary_d9430" behavior="0" />
+      <RootComponent type="50" schemaName=":RibbonDiffXml" behavior="0" />
       <RootComponent type="60" id="{1af045de-da70-ed11-9562-0022482dbb52}" behavior="0" />
       <RootComponent type="60" id="{515d6f14-0570-ed11-9562-0022482dbd9d}" behavior="0" />
       <RootComponent type="60" id="{e3622473-f864-ed11-9562-0022482db4f8}" behavior="0" />
       <RootComponent type="62" schemaName="new_MA" behavior="0" />
+      <RootComponent type="62" schemaName="new_PipelineApp" behavior="0" />
+      <RootComponent type="62" schemaName="new_SmartSheets" behavior="0" />
       <RootComponent type="80" schemaName="new_MA" behavior="0" />
+      <RootComponent type="80" schemaName="new_PipelineApp" behavior="0" />
+      <RootComponent type="80" schemaName="new_SmartSheets" behavior="0" />
       <RootComponent type="9" schemaName="new_apaspa" behavior="0" />
       <RootComponent type="9" schemaName="new_approvallevel" behavior="0" />
+      <RootComponent type="9" schemaName="new_dealteam" behavior="0" />
       <RootComponent type="9" schemaName="new_dealtype" behavior="0" />
       <RootComponent type="9" schemaName="new_insurance" behavior="0" />
+      <RootComponent type="9" schemaName="new_states" behavior="0" />
       <RootComponent type="9" schemaName="new_traditionalnontraditional" behavior="0" />
       <RootComponent type="9" schemaName="new_truefalse" behavior="0" />
       <RootComponent type="9" schemaName="new_yesnoblank" behavior="0" />
@@ -148,13 +156,13 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{707fc57b-c5e6-471b-a180-e37ed28a38e2}">
-          <package>msdynce_AppCommonAnchor (9.0.22103.10001)</package>
+          <package>msdynce_AppCommonAnchor (9.0.22105.10001)</package>
         </Required>
         <Dependent type="60" displayName="contact card" parentDisplayName="Contact" id="{707fc57b-c5e6-471b-a180-e37ed28a38e2}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="Contact Card form" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf}">
-          <package>msdynce_AppCommonAnchor (9.0.22103.10001)</package>
+          <package>msdynce_AppCommonAnchor (9.0.22105.10001)</package>
         </Required>
         <Dependent type="60" displayName="Contact Card form" parentDisplayName="Contact" id="{bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf}" />
       </MissingDependency>
@@ -163,31 +171,43 @@
         <Dependent type="80" schemaName="new_MA" displayName="M&amp;A" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="new_PipelineApp" displayName="Pipeline App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="new_SmartSheets" displayName="Smart Sheets" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.5016)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.5016)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Deal" id="{4fa3d62f-4c81-4666-83ce-19b61c72f067}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.5016)" />
+        <Dependent type="68" id="{38bb75cc-7588-42d6-a6a2-39c4d7241bc8}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.5016)" />
         <Dependent type="68" id="{4cad2b09-8d15-4c56-a76a-c7b9f527da08}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.4014)" />
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2210.5016)" />
         <Dependent type="68" id="{9c1eb11c-18f2-4300-a012-7c6a6dcb0fc7}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.OptionSet.OptionSetControl" displayName="MscrmControls.OptionSet.OptionSetControl" solution="CustomControlsCore (9.2.22104.00224)" />
+        <Required type="66" schemaName="MscrmControls.OptionSet.OptionSetControl" displayName="MscrmControls.OptionSet.OptionSetControl" solution="CustomControlsCore (9.2.22105.00202)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.Rating.StarRatingControl" displayName="MscrmControls.Rating.StarRatingControl" solution="CustomControlsCore (9.2.22104.00224)" />
+        <Required type="66" schemaName="MscrmControls.Rating.StarRatingControl" displayName="MscrmControls.Rating.StarRatingControl" solution="CustomControlsCore (9.2.22105.00202)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.RichTextEditor.RichTextEditorControl" displayName="MscrmControls.RichTextEditor.RichTextEditorControl" solution="msdyn_RichTextEditor (1.0.0.2017)" />
+        <Required type="66" schemaName="MscrmControls.RichTextEditor.RichTextEditorControl" displayName="MscrmControls.RichTextEditor.RichTextEditorControl" solution="msdyn_RichTextEditor (1.0.0.2019)" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pre-Deal" id="{30755532-d097-4095-b56f-15bc87efc95b}" />
       </MissingDependency>
       <MissingDependency>
@@ -213,6 +233,14 @@
       <MissingDependency>
         <Required type="SettingDefinition" displayName="AllowNotificationsEarlyAccess" solution="AppNotifications (10.0.0.10)" id.uniquename="AllowNotificationsEarlyAccess" />
         <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=new_MA,settingdefinitionid.uniquename=AllowNotificationsEarlyAccess" id.parentappmoduleid.uniquename="new_MA" id.settingdefinitionid.uniquename="AllowNotificationsEarlyAccess" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AllowNotificationsEarlyAccess" solution="AppNotifications (10.0.0.10)" id.uniquename="AllowNotificationsEarlyAccess" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=new_SmartSheets,settingdefinitionid.uniquename=AllowNotificationsEarlyAccess" id.parentappmoduleid.uniquename="new_SmartSheets" id.settingdefinitionid.uniquename="AllowNotificationsEarlyAccess" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="MobileCommandingImprovements2022Tablet" solution="msdyn_CommandingSettings (1.0.0.0)" id.uniquename="MobileCommandingImprovements2022Tablet" />
+        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=new_SmartSheets,settingdefinitionid.uniquename=MobileCommandingImprovements2022Tablet" id.parentappmoduleid.uniquename="new_SmartSheets" id.settingdefinitionid.uniquename="MobileCommandingImprovements2022Tablet" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>
