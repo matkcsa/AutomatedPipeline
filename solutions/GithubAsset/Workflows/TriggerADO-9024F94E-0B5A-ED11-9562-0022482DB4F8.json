@@ -1,0 +1,166 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_visualstudioteamservices": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedvisualstudioteamservices_ff1b8"
+        },
+        "api": {
+          "name": "shared_visualstudioteamservices"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_e78da"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "ac46380f-2084-4185-8713-4279d73a8444"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "solution",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "version",
+              "subscriptionRequest/runas": 3
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "List_projects": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a6a95a18-e7d6-4bc8-8a76-3796a7556768"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_visualstudioteamservices",
+              "operationId": "ListProjects",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_visualstudioteamservices"
+            },
+            "parameters": {
+              "account": "MatthewKarrCSA"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_projects')?['body/value']",
+          "actions": {
+            "List_pipelines": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "1f789108-af1c-4259-ba79-e859ca83f26d"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_visualstudioteamservices",
+                  "operationId": "ListPipelines",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_visualstudioteamservices"
+                },
+                "parameters": {
+                  "account": "MatthewKarrCSA",
+                  "project": "@items('Apply_to_each')?['name']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each_2": {
+              "foreach": "@outputs('List_pipelines')?['body/value']",
+              "actions": {
+                "Queue_a_new_build": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "6407fc0b-7446-4fb9-adc1-7fc9185be905"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_visualstudioteamservices",
+                      "operationId": "QueueNewBuild",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_visualstudioteamservices"
+                    },
+                    "parameters": {
+                      "account": "MatthewKarrCSA",
+                      "project": "@items('Apply_to_each')?['name']",
+                      "buildDefId": "@items('Apply_to_each_2')?['id']",
+                      "buildDetails/sourceBranch": "main"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_pipelines": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "474cccf4-3c22-4e12-a272-09ff16c71f06"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "List_projects": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a2d3f00e-4de8-4dfd-bfc2-1569a96bcacd"
+          },
+          "type": "Foreach"
+        },
+        "Terminate": {
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ce1319e4-f255-4eb3-8242-bcaf75a5e1de"
+          },
+          "type": "Terminate",
+          "inputs": {
+            "runStatus": "Succeeded"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
