@@ -1,0 +1,158 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedsharepointonline_93e8c"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "e722d9bb-b9a6-4d17-87a0-de5074c83e19"
+          },
+          "type": "Request",
+          "kind": "PowerApp",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ComposeFileName_Inputs": {
+                  "type": "any",
+                  "description": "Inputs",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "ComposeRowId_Inputs": {
+                  "type": "any",
+                  "description": "Inputs",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "ComposeFileContent_Inputs": {
+                  "type": "any",
+                  "description": "Inputs",
+                  "x-ms-powerflows-param-ispartial": false
+                }
+              },
+              "required": [
+                "ComposeFileName_Inputs",
+                "ComposeRowId_Inputs",
+                "ComposeFileContent_Inputs"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Compose_File_Name": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "b647ece9-f008-42ce-9467-e87872a01a3c"
+          },
+          "type": "Compose",
+          "inputs": "@triggerBody()['ComposeFileName_Inputs']"
+        },
+        "Compose_Row_Id": {
+          "runAfter": {
+            "Compose_File_Name": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "093d49ac-5a0a-4d30-9afc-627a5e3c7ed3"
+          },
+          "type": "Compose",
+          "inputs": "@triggerBody()['ComposeRowId_Inputs']"
+        },
+        "Compose_File_Content": {
+          "runAfter": {
+            "Compose_Row_Id": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "51ab4ffb-aa15-46d8-b2a8-9419e8fc4671"
+          },
+          "type": "Compose",
+          "inputs": "@triggerBody()['ComposeFileContent_Inputs']"
+        },
+        "Add_attachment": {
+          "runAfter": {
+            "Compose_File_Content": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b347d12b-c279-4a3d-af5f-d7a62653eaa0"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "CreateAttachment",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "https://democsuappinnovation.sharepoint.com/sites/MatkDev",
+              "table": "c4b636f8-0de3-42a3-8dfe-4d7cba654aa7",
+              "itemId": "@outputs('Compose_Row_Id')",
+              "displayName": "@outputs('Compose_File_Name')",
+              "body": "@base64ToBinary(outputs('Compose_File_Content'))"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Respond_to_a_PowerApp_or_flow": {
+          "runAfter": {
+            "Add_attachment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1a94eafc-1911-4ec9-82e7-9d0ebdcad767"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "status": "Done"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "title": "Status",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}
