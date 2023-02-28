@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>new_thecoolercommittee_53b2f</Name>
+  <AppVersion>2023-02-27T20:35:46Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.23021.21.0</CreatedByClientVersion>
+  <MinClientVersion>3.23021.21.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1136","primaryDeviceHeight":"640","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.23021.21","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20230223T173847Z-3.23021.21.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(0, 176, 240, 1)</BackgroundColor>
+  <DisplayName>The Cooler -  Committee</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"be711876-1d87-4240-8720-5699c5d8d9a6":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png","dataSources":["Yeti Ideas","Yeti Approvers"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"https://democsuappinnovation.sharepoint.com/sites/MatkDev":{"dataSources":{"Yeti Ideas":{"tableName":"c4b636f8-0de3-42a3-8dfe-4d7cba654aa7"},"Yeti Approvers":{"tableName":"0114f63a-e4b8-4a97-b4a1-6a8be5dfa9bc"}}}},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read"]},"f741bdc8-b287-4123-8e50-e138cc758018":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png","dataSources":["YETIAddAttachmentMAIN"],"dependencies":["71a3ac62-7fc4-4e01-b329-3964b24ad4cd"],"dependents":[],"parameterHints":{"workflowName":{"value":"b294a7b0-4624-421b-b848-e9621c427b14"},"workflowEntityId":{"value":"4d4a4e98-a4ac-ed11-aad1-0022482dbd7a"},"71a3ac62-7fc4-4e01-b329-3964b24ad4cd":{"value":"shared_sharepointonline"}},"parameterHintsV2":{"workflowName":{"value":"b294a7b0-4624-421b-b848-e9621c427b14"},"workflowEntityId":{"value":"4d4a4e98-a4ac-ed11-aad1-0022482dbd7a"},"shared_sharepointonline":{"value":"71a3ac62-7fc4-4e01-b329-3964b24ad4cd"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"71a3ac62-7fc4-4e01-b329-3964b24ad4cd":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png","dataSources":[],"dependencies":[],"dependents":["f741bdc8-b287-4123-8e50-e138cc758018"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read"]},"25d328c7-d9ad-4e1a-8643-d8d9e110fc6e":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 Users","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1618/1.0.1618.3179/office365users/icon.png","dataSources":["Office365Users"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/new_thecoolercommittee_53b2f_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/new_thecoolercommittee_53b2f_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

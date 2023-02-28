@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_SharepointSite"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_an_item_is_created_or_modified": {
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Minute"
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "1c7992a3-03dc-4731-b369-991ff0bb164c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline_1",
+              "operationId": "GetOnUpdatedItems",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "https://democsuappinnovation.sharepoint.com/sites/MatkDev",
+              "table": "c4b636f8-0de3-42a3-8dfe-4d7cba654aa7"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condition": {
+          "actions": {},
+          "runAfter": {
+            "Initialize_variable_varProceed": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "greater": [
+              "@outputs('Compose')",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "43b26c2a-11e5-4e04-8f48-cc6d258d622d"
+          },
+          "type": "If"
+        },
+        "Initialize_variable_varProceed": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2384ca2f-fe91-442a-9388-a3a7dc18aa4c"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "varProceed",
+                "type": "boolean"
+              }
+            ]
+          }
+        },
+        "Compose": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "8f8bc507-5279-46c8-aab0-69131042c083"
+          },
+          "type": "Compose",
+          "inputs": "@if(greater(length(triggerOutputs()?['body/BusinessApproverScore']),0),true )"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
