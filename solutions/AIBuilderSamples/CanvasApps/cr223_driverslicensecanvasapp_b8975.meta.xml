@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>cr223_driverslicensecanvasapp_b8975</Name>
+  <AppVersion>2023-03-08T18:54:14Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.21062.38.0</CreatedByClientVersion>
+  <MinClientVersion>3.21062.38.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","sienaVersion":"24e8059a-c7fa-4f2f-b89f-43e1d1f8fd4e","deviceCapabilities":"webcam","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.21062.38","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(0, 176, 240, 1)</BackgroundColor>
+  <DisplayName>DriversLicenseCanvasApp</DisplayName>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"4da11935-ac28-4560-9c78-2258e2924687":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png","dataSources":["ProcessDriversLicenseFlow"],"dependencies":["b235e6ca-cb83-4cdd-938e-eaad9cf52848"],"dependents":[],"parameterHints":{"workflowName":{"value":"cbfe3441-e959-4287-bdf0-315e70bc23fa"},"workflowEntityId":{"value":"42dbc7a9-b2dd-eb11-bacb-001dd802ddc8"},"b235e6ca-cb83-4cdd-938e-eaad9cf52848":{"value":"shared_commondataserviceforapps"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"b235e6ca-cb83-4cdd-938e-eaad9cf52848":{"id":"/providers/microsoft.powerapps/apis/shared_commondataserviceforapps","displayName":"Microsoft Dataverse","iconUri":"https://connectoricons-prod.azureedge.net/u/juanq/fixes/commondataserviceforapps/backgroundOperationFix/1.0.1618.3180/commondataserviceforapps/icon.png","dataSources":[],"dependencies":[],"dependents":["4da11935-ac28-4560-9c78-2258e2924687"],"parameterHints":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Premium"}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/cr223_driverslicensecanvasapp_b8975_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/cr223_driverslicensecanvasapp_b8975_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

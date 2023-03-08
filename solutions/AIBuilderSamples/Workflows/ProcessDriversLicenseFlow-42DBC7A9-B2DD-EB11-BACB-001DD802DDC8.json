@@ -1,0 +1,201 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_e78da"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "5749393a-b71b-4fc8-bf2e-03aa4a4ba58d"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "file": {
+                  "title": "Image",
+                  "type": "object",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please select file or image",
+                  "x-ms-content-hint": "FILE",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "contentBytes": {
+                      "type": "string",
+                      "format": "byte"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "file"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Process_and_save_information_from_identity_documents": {
+          "runAfter": {},
+          "metadata": {
+            "flowSystemMetadata": {
+              "portalOperationId": "aibuilderpredict_identitydocumentpretrained",
+              "portalOperationGroup": "aibuilder",
+              "portalOperationApiDisplayNameOverride": "AI Builder",
+              "portalOperationIconOverride": "https://content.powerapps.com/resource/makerx/static/pauto/images/designeroperations/aiBuilderNew.51dbdb6b.png",
+              "portalOperationBrandColorOverride": "#0A76C4",
+              "portalOperationApiTierOverride": "Standard"
+            },
+            "operationMetadataId": "b9ebe0cb-dcdc-4794-9d10-485d92e6064c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "aibuilderpredict_identitydocumentpretrained",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "item/requestv2/base64Encoded": "@triggerBody()?['file']?['contentBytes']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Respond_to_a_PowerApp_or_flow": {
+          "runAfter": {
+            "Process_and_save_information_from_identity_documents": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "527f77c6-d03a-42dc-928f-c2cac5cca8f1"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "address": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/address/value']",
+              "gender": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/sex/value']",
+              "firstname": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/firstName/value']",
+              "lastname": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/lastName/value']",
+              "state": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/region/value']",
+              "dob": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/dateOfBirth/value']",
+              "expiration": "@outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/dateOfExpiration/value']",
+              "addressconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/address/confidence']}",
+              "genderconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/sex/confidence']}",
+              "firstnameconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/firstName/confidence']}",
+              "lastnameconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/lastName/confidence']}",
+              "stateconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/region/confidence']}",
+              "dobconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/dateOfBirth/confidence']}",
+              "expirationconfidence": "@{outputs('Process_and_save_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/dateOfExpiration/confidence']}"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "title": "Address",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "gender": {
+                  "title": "Gender",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "firstname": {
+                  "title": "FirstName",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "lastname": {
+                  "title": "LastName",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "state": {
+                  "title": "State",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "dob": {
+                  "title": "DOB",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "expiration": {
+                  "title": "Expiration",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "addressconfidence": {
+                  "title": "AddressConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "genderconfidence": {
+                  "title": "GenderConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "firstnameconfidence": {
+                  "title": "FirstNameConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "lastnameconfidence": {
+                  "title": "LastNameConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "stateconfidence": {
+                  "title": "StateConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "dobconfidence": {
+                  "title": "DOBConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "expirationconfidence": {
+                  "title": "ExpirationConfidence",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
