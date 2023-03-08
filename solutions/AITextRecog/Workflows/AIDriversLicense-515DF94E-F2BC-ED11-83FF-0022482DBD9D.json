@@ -1,0 +1,127 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_DataverseConRef"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "21756124-7740-4a73-9c02-6ccd0def11c1"
+          },
+          "type": "Request",
+          "kind": "PowerApp",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Extractinformationfromidentitydocuments_Identitydocumentfile": {
+                  "type": "string",
+                  "format": "byte",
+                  "description": "Select an identity document to process",
+                  "x-ms-powerflows-param-ispartial": false
+                }
+              },
+              "required": [
+                "Extractinformationfromidentitydocuments_Identitydocumentfile"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Extract_information_from_identity_documents": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6426b678-4380-49c6-b222-b680e5c0fb09",
+            "flowSystemMetadata": {
+              "portalOperationId": "aibuilderpredict_identitydocumentpretrained",
+              "portalOperationGroup": "aibuilder",
+              "portalOperationApiDisplayNameOverride": "AI Builder",
+              "portalOperationIconOverride": "https://content.powerapps.com/resource/makerx/static/pauto/images/designeroperations/aiBuilderNew.51dbdb6b.png",
+              "portalOperationBrandColorOverride": "#0A76C4",
+              "portalOperationApiTierOverride": "Standard"
+            }
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "aibuilderpredict_identitydocumentpretrained",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "item/requestv2/base64Encoded": "@triggerBody()['Extractinformationfromidentitydocuments_Identitydocumentfile']"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Respond_to_a_PowerApp_or_flow": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "946cdb3e-96d6-4087-a6f6-1a95a9ca236b"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "driver": "@{outputs('Compose')}"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "driver": {
+                  "title": "Driver",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Compose": {
+          "runAfter": {
+            "Extract_information_from_identity_documents": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "980bf212-5b40-4a39-8bbc-58777afa603c"
+          },
+          "type": "Compose",
+          "inputs": "@concat(outputs('Extract_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/firstName/value'], ';',outputs('Extract_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/lastName/value'], ';', outputs('Extract_information_from_identity_documents')?['body/responsev2/predictionOutput/result/fields/dateOfExpiration/value'])"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
