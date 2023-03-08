@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_new_kcdelivery" />
+  <EntityRelationship Name="business_unit_new_kctestdata" />
+  <EntityRelationship Name="lk_new_kcdelivery_createdby" />
+  <EntityRelationship Name="lk_new_kcdelivery_modifiedby" />
+  <EntityRelationship Name="lk_new_kctestdata_createdby" />
+  <EntityRelationship Name="lk_new_kctestdata_modifiedby" />
+  <EntityRelationship Name="new_new_kcdelivery_TruckInfo_new_kctestdata" />
+  <EntityRelationship Name="owner_new_kcdelivery" />
+  <EntityRelationship Name="owner_new_kctestdata" />
+  <EntityRelationship Name="team_new_kcdelivery" />
+  <EntityRelationship Name="team_new_kctestdata" />
+  <EntityRelationship Name="user_new_kcdelivery" />
+  <EntityRelationship Name="user_new_kctestdata" />
+</EntityRelationships>

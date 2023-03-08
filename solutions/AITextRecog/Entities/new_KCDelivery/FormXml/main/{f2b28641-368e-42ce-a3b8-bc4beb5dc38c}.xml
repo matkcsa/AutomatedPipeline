@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f2b28641-368e-42ce-a3b8-bc4beb5dc38c}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{9e2725f3-8b83-4aad-a913-d616e73caad0}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{30f0260c-bb65-4d8c-b5f3-b63e037a0266}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5199c6df-c466-4c59-bd5d-a0129b18b68c}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a838bc20-3bd0-4885-81ce-5e643a1ccbb9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Carrier" languagecode="1033" />
+                        </labels>
+                        <control id="new_carrier" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_carrier" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{60a6bcb6-134d-4d4f-9a51-a309c44fcca9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Truck Number" languagecode="1033" />
+                        </labels>
+                        <control id="new_trucknumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_trucknumber" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ec907a24-7155-4ea6-9a2d-0d87b95737bc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Expected Delivery" languagecode="1033" />
+                        </labels>
+                        <control id="new_expecteddelivery" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_expecteddelivery" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{16778fdf-e4f9-4c78-81ce-bbcfc24a2ed9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Status" languagecode="1033" />
+                        </labels>
+                        <control id="new_deliverystatus" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_deliverystatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ce960a76-8111-4bf9-ae71-58f57800e901}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Actual Delivery" languagecode="1033" />
+                        </labels>
+                        <control id="new_actualdelivery" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="new_actualdelivery" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fc7a0d90-27b7-4c5d-8802-373ab56a8cd2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Truck Info" languagecode="1033" />
+                        </labels>
+                        <control id="new_truckinfo" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="new_truckinfo" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1702688d-bf3c-4ef2-8efa-55fc0ceefe90}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{e0039fbb-e8d3-4033-bec0-34c6e7f3f411}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{33d67366-c18e-418b-bb4e-6a42739bb2b8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{7509471d-9557-46ba-84e9-18f331f0f313}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{037c290a-b62c-4976-819b-2f597fa9af11}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{87631e55-4bf1-4ff8-a7b8-8c1018e9c829}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ce0a4dca-4749-49b1-9d98-22719679aacd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{5af4ee12-5906-4654-b329-8b02af512da4}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{57321ee7-6fdb-4a85-a6d1-cfbd104b843e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
