@@ -1,0 +1,48 @@
+{
+  "intents": [
+    {
+      "triggerQueries": [
+        "starwars"
+      ],
+      "dialogId": "new_topic_4ea6cabcfec04a28b9f2d5b1210cfe33",
+      "isTriggeringEnabled": true,
+      "id": "new_topic_4ea6cabcfec04a28b9f2d5b1210cfe33",
+      "displayName": "starwars",
+      "createdTime": "2023-03-09T22:12:27.974322Z",
+      "updatedTime": "2023-03-09T22:13:11.6745458Z",
+      "createdUserId": "5f15ce8b-4609-4e76-bc4a-6607e10873b9",
+      "updatedUserId": "5f15ce8b-4609-4e76-bc4a-6607e10873b9"
+    }
+  ],
+  "dialogs": [
+    {
+      "rootNodeId": "6161b365-eeca-4e02-95a2-f0305e6bc625",
+      "messageNodes": [
+        {
+          "botMessageId": "5ad3c503-679b-49ff-bae6-9f1984cf6069",
+          "nodeType": "BotMessageNode",
+          "id": "6161b365-eeca-4e02-95a2-f0305e6bc625"
+        }
+      ],
+      "id": "new_topic_4ea6cabcfec04a28b9f2d5b1210cfe33",
+      "displayName": "Untitled",
+      "createdTime": "2023-03-09T22:12:27.974322Z",
+      "updatedTime": "2023-03-09T22:13:11.6745458Z",
+      "createdUserId": "5f15ce8b-4609-4e76-bc4a-6607e10873b9",
+      "updatedUserId": "5f15ce8b-4609-4e76-bc4a-6607e10873b9"
+    }
+  ],
+  "botMessages": [
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "May the Force be with You"
+        }
+      },
+      "id": "5ad3c503-679b-49ff-bae6-9f1984cf6069",
+      "createdTime": "2023-03-09T22:12:06.559Z",
+      "updatedTime": "2023-03-09T22:12:06.559Z"
+    }
+  ]
+}

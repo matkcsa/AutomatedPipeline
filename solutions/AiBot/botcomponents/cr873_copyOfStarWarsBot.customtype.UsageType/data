@@ -1,0 +1,16 @@
+kind: ClosedListEntity
+items:
+  - id: ff0ca6dd-de7a-4bee-b849-16210d63f3c5
+    displayName: Home User
+    synonyms:
+      - home
+
+  - id: 2ccf421b-89a6-43a8-8b4f-b8d8f63b58bf
+    displayName: Gamer
+    synonyms:
+      - gaming
+
+  - id: 2d32734c-9552-47c5-963b-563fe1d9ea7e
+    displayName: Business User
+    synonyms:
+      - business

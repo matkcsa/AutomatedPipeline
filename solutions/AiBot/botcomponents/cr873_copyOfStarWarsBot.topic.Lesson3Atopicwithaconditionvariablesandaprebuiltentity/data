@@ -1,0 +1,116 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: Lesson 3 - A topic with a condition, variables and a pre-built entity
+    triggerQueries:
+      - Buy items
+      - Buy online
+      - Buy product
+      - Purchase item
+      - Order product
+
+  actions:
+    - kind: SendMessage
+      id: fabcaff7-0ce9-4231-835c-60b1ee5b52a3
+      message: I am happy to help you place your order.
+
+    - kind: Question
+      id: 9271a869-3735-4a21-9ce1-17ff112388a3
+      alwaysPrompt: false
+      variable: init:Topic.pva_State
+      prompt: To what state will you be shipping?
+      entity: StatePrebuiltEntity
+
+    - kind: ConditionGroup
+      id: condition-0
+      conditions:
+        - id: condition-0-item-0
+          condition: =Topic.pva_State = "California" || Topic.pva_State = "Washington" || Topic.pva_State = "Oregon"
+
+      elseActions:
+        - kind: SendMessage
+          id: 03c948a4-0aa0-4709-97cc-717cc49f3fd5
+          message: There will be an additional shipping charge of $27.50.
+
+        - kind: Question
+          id: f07a8b8e-b905-4f9c-a7b7-6465fc2bff1f
+          alwaysPrompt: false
+          variable: init:Topic.pva_OKShippingRate
+          prompt: Is that acceptable?
+          entity: BooleanPrebuiltEntity
+
+        - kind: ConditionGroup
+          id: condition-2
+          conditions:
+            - id: condition-2-item-0
+              condition: =Topic.pva_OKShippingRate = true
+
+          elseActions:
+            - kind: SendMessage
+              id: 1f5a1841-7988-4874-a32d-ed271cc46951
+              message: Thank you and please come again.
+
+            - kind: BeginDialog
+              id: a54d580a-9c1d-432c-97a0-475345d16338
+              dialog: cr873_copyOfStarWarsBot.topic.EndofConversation
+
+    - kind: Question
+      id: 2d411fa2-d129-4b4b-b097-546703c2450e
+      alwaysPrompt: true
+      variable: init:Topic.pva_Item
+      prompt: What item are you interested in purchasing? We are focused on a few quality items.
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          smartMatchingEnabled: true
+          items:
+            - id: a55271b8-47fb-4a81-9030-15e4ec7a6132
+              displayName: Desktop Computer
+
+            - id: 31f5ecbd-a23a-451e-8e28-1b74d8a052e0
+              displayName: Laptop Computer
+
+            - id: 73d880d8-2568-45c8-ad62-8e0e472d52b9
+              displayName: Gaming Computer
+
+    - kind: ConditionGroup
+      id: condition-1
+      conditions:
+        - id: condition-1-item-0
+          condition: =Topic.pva_Item = 'cr873_copyOfStarWarsBot.topic.Lesson3Atopicwithaconditionvariablesandaprebuiltentity.main.2d411fa2-d129-4b4b-b097-546703c2450e'.'a55271b8-47fb-4a81-9030-15e4ec7a6132'
+          actions:
+            - kind: SendMessage
+              id: 76ea102a-d56a-4ac5-b5e1-f75702e3edaf
+              message: Great choice for the desktop publisher!
+
+        - id: condition-1-item-1
+          condition: =Topic.pva_Item = 'cr873_copyOfStarWarsBot.topic.Lesson3Atopicwithaconditionvariablesandaprebuiltentity.main.2d411fa2-d129-4b4b-b097-546703c2450e'.'31f5ecbd-a23a-451e-8e28-1b74d8a052e0'
+          actions:
+            - kind: SendMessage
+              id: 4c14e0fc-359c-49c4-a36a-f173bf2b1934
+              message: Great choice for the on-the-go road warrior!
+
+        - id: condition-1-item-2
+          condition: =Topic.pva_Item = 'cr873_copyOfStarWarsBot.topic.Lesson3Atopicwithaconditionvariablesandaprebuiltentity.main.2d411fa2-d129-4b4b-b097-546703c2450e'.'73d880d8-2568-45c8-ad62-8e0e472d52b9'
+          actions:
+            - kind: SendMessage
+              id: 401a587a-fd7a-4a19-8ce9-b1825ce8f4a8
+              message: Go get 'em tiger! Sudoku helps keep the mind active.
+
+    - kind: SendMessage
+      id: ff5f27b5-09c1-4c86-a335-6a684d188236
+      message: I am adding {Topic.pva_Item} to your cart.
+
+    - kind: SendMessage
+      id: 628e4deb-8e34-4794-a345-b3bcf1494a19
+      message: |-
+        To complete your order, please go to your cart.
+        
+        Thank you!
+
+    - kind: BeginDialog
+      id: clone-a54d580a-9c1d-432c-97a0-475345d16338--1
+      dialog: cr873_copyOfStarWarsBot.topic.EndofConversation

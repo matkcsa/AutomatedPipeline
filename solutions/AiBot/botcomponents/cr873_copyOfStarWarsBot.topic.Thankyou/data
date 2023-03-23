@@ -1,0 +1,16 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnSystemIntent
+  id: main
+  intent:
+    displayName: Thank you
+    triggerQueries:
+      - thanks
+      - thank you
+      - thanks so much
+      - ty
+
+  actions:
+    - kind: SendMessage
+      id: 6c46869b-e8cd-4e1a-a80c-9d73e61d71b5
+      message: You're welcome!

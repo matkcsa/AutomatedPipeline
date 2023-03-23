@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr873_copyOfStarWarsBot.topic.Didyoumean">
+  <componenttype>9</componenttype>
+  <description>This system topic triggers when the bot is ambiguous about which topic to trigger.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Did you mean</name>
+  <parentbotid>
+    <schemaname>cr873_copyOfStarWarsBot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

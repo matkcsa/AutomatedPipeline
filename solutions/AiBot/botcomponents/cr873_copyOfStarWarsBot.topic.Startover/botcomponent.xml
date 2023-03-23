@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr873_copyOfStarWarsBot.topic.Startover">
+  <componenttype>9</componenttype>
+  <description>System Intent Start Over</description>
+  <iscustomizable>1</iscustomizable>
+  <name>Start over</name>
+  <parentbotid>
+    <schemaname>cr873_copyOfStarWarsBot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

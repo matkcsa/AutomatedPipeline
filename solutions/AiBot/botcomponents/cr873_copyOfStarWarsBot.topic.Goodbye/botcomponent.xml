@@ -1,0 +1,11 @@
+<botcomponent schemaname="cr873_copyOfStarWarsBot.topic.Goodbye">
+  <componenttype>9</componenttype>
+  <description>System Intent Goodbye</description>
+  <iscustomizable>1</iscustomizable>
+  <name>Goodbye</name>
+  <parentbotid>
+    <schemaname>cr873_copyOfStarWarsBot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

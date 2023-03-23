@@ -1,0 +1,147 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_teams": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedteams_e68d0"
+        },
+        "api": {
+          "name": "shared_teams"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "8038955a-a7df-40ee-8ee7-7f64485a3c72"
+          },
+          "type": "Request",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Content",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Chat_content",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Return_value(s)_to_Power_Virtual_Agents": {
+          "runAfter": {
+            "Post_message_in_a_chat_or_channel": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "42f2e0a0-041b-4513-8e9e-52c769e66b00"
+          },
+          "type": "Response",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "statusCode": 200,
+            "body": {},
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "Create_a_chat": {
+          "runAfter": {
+            "Compose_Body": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "56602e12-52b1-48ee-9c22-2cfffe5d35f7"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_teams",
+              "operationId": "CreateChat",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+            },
+            "parameters": {
+              "item/members": "lori.gowin@microsoft.com;matthewkarr@microsoft.com",
+              "item/topic": "Help Me Bot Test"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Post_message_in_a_chat_or_channel": {
+          "runAfter": {
+            "Create_a_chat": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c65f79cc-da54-4358-bd52-e1077b1f8c3a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_teams",
+              "operationId": "PostMessageToConversation",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+            },
+            "parameters": {
+              "poster": "Flow bot",
+              "location": "@outputs('Create_a_chat')?['body/id']",
+              "body": "@triggerBody()"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_Content": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "02b8ccb3-8257-4c9b-be27-34edb184c689"
+          },
+          "type": "Compose",
+          "inputs": "@triggerBody()['text']"
+        },
+        "Compose_Body": {
+          "runAfter": {
+            "Compose_Content": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dbbd321e-23a3-4d63-8be3-399e5287839b"
+          },
+          "type": "Compose",
+          "inputs": "@triggerBody()"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "c9cd2c4e691a4646adc8aa592c88489b"
+  },
+  "schemaVersion": "1.0.0.0"
+}

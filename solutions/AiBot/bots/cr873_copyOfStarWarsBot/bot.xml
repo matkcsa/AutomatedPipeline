@@ -1,0 +1,11 @@
+<bot schemaname="cr873_copyOfStarWarsBot">
+  <authenticationmode>1</authenticationmode>
+  <authenticationtrigger>0</authenticationtrigger>
+  <iscustomizable>0</iscustomizable>
+  <language>1033</language>
+  <name>AI StarWars Bot</name>
+  <runtimeprovider>0</runtimeprovider>
+  <synchronizationstatus>{
+  "contentVersion": 0
+}</synchronizationstatus>
+</bot>
