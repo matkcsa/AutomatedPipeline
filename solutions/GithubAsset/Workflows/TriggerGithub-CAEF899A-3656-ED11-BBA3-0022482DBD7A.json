@@ -1,0 +1,176 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_github": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_Github_MatkCSA"
+        },
+        "api": {
+          "name": "shared_github"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_e78da"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "ac46380f-2084-4185-8713-4279d73a8444"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "solution",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "version",
+              "subscriptionRequest/runas": 3
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "HTTP": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f1df6988-6d25-4593-92f2-98c49186f3db"
+          },
+          "type": "Http",
+          "inputs": {
+            "method": "POST",
+            "uri": "https://api.github.com/repos/matk0110/mk_GitHubActions_Gitlabtest/dispatches",
+            "headers": {
+              "accept": "application/vnd.github.v3+json",
+              "content-type": "application/json",
+              "authorization": "Bearer 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"
+            },
+            "body": "@outputs('Compose')"
+          }
+        },
+        "Compose_Payload": {
+          "runAfter": {
+            "Get_a_repository_by_Id": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a39be2e7-3437-4d90-9330-92680af332ee"
+          },
+          "type": "Compose",
+          "inputs": {
+            "solution_name": "@{triggerOutputs()?['body/uniquename']}",
+            "DevEnvironmentUrl": "https://orgede4f8fe.crm.dynamics.com/"
+          }
+        },
+        "Get_a_repository_by_Id": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6f224bf3-d42d-47a6-9ced-4943d7878dcf"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_github",
+              "operationId": "GetRepositoryById",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_github"
+            },
+            "parameters": {
+              "repositoryId": 573047070
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Terminate": {
+          "runAfter": {
+            "Create_a_repository_dispatch_event": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a997a5cb-ac33-407a-8598-f2a9766eed5c"
+          },
+          "type": "Terminate",
+          "inputs": {
+            "runStatus": "Succeeded"
+          }
+        },
+        "Create_a_repository_dispatch_event": {
+          "runAfter": {
+            "Compose_Payload": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef8f8a94-f8ab-4c33-8c7e-6443e0c9e8a1"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_github",
+              "operationId": "CreateRepositoryDispatchEvent",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_github"
+            },
+            "parameters": {
+              "repositoryOwner": "@outputs('Get_a_repository_by_Id')?['body/owner/login']",
+              "repositoryName": "@outputs('Get_a_repository_by_Id')?['body/name']",
+              "body/event_type": "my-event",
+              "body/client_payload": "@outputs('Compose_Payload')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose": {
+          "runAfter": {
+            "Terminate": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "41c108f0-d12a-42ba-a1f9-cdfbffdc2270"
+          },
+          "type": "Compose",
+          "inputs": {
+            "event_type": "my-event",
+            "client_payload": {
+              "solution_name": "@{triggerOutputs()?['body/friendlyname']}"
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
